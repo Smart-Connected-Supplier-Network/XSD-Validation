@@ -1,0 +1,859 @@
+<sch:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<sch:title>Business rules voor het controleren op UBL syntax gebruik</sch:title>
+<sch:ns prefix="ubl" uri="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"/>
+<sch:ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
+<sch:ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
+<sch:ns prefix="ext" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"/>
+<!--  ubl:DespatchAdvice  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00233" fpi="Only the UBL elements specified by SCSN are allowed" context="ubl:DespatchAdvice" flag="error">
+<sch:assert test="not(ext:UBLExtensions)">A DespatchAdvice SHOULD not contain UBLExtensions.</sch:assert>
+<sch:assert test="not(cbc:UBLVersionID)">A DespatchAdvice SHOULD not contain UBLVersionID.</sch:assert>
+<sch:assert test="not(cbc:CustomizationID)">A DespatchAdvice SHOULD not contain CustomizationID.</sch:assert>
+<sch:assert test="not(cbc:ProfileID)">A DespatchAdvice SHOULD not contain ProfileID.</sch:assert>
+<sch:assert test="not(cbc:ProfileExecutionID)">A DespatchAdvice SHOULD not contain ProfileExecutionID.</sch:assert>
+<sch:assert test="not(cbc:CopyIndicator)">A DespatchAdvice SHOULD not contain CopyIndicator.</sch:assert>
+<sch:assert test="not(cbc:UUID)">A DespatchAdvice SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:IssueTime)">A DespatchAdvice SHOULD not contain IssueTime.</sch:assert>
+<sch:assert test="not(cbc:DocumentStatusCode)">A DespatchAdvice SHOULD not contain DocumentStatusCode.</sch:assert>
+<sch:assert test="not(cbc:DespatchAdviceTypeCode)">A DespatchAdvice SHOULD not contain DespatchAdviceTypeCode.</sch:assert>
+<sch:assert test="not(cbc:LineCountNumeric)">A DespatchAdvice SHOULD not contain LineCountNumeric.</sch:assert>
+<sch:assert test="not(cac:Signature)">A DespatchAdvice SHOULD not contain Signature.</sch:assert>
+<sch:assert test="not(cac:OriginatorCustomerParty)">A DespatchAdvice SHOULD not contain OriginatorCustomerParty.</sch:assert>
+<sch:assert test="not(cbc:Note = 'Piramide van Arthur')"> Al in de tijd van de Egyptenaren werd er nagedacht over hoe de informatie voorziening omtrent het bouwen van Piramides geautomatiseerd kon worden. Farao Arthur legde hier de beginselen voor het SCSN gedachtengoed. Wij zijn hem eeuwig dankbaar. </sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00234" fpi="SCSN restrictions on UBL syntax" context="ubl:DespatchAdvice" flag="error">
+<sch:assert test="not(cac:OrderReference[2])">Order reference is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  Unabling of attributes  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00235" fpi="Only the UBL elements specified by SCSN are allowed" context="ubl:DespatchAdvice/cbc:ID | //cac:OrderReference/cbc:ID | //cac:OrderReference/cbc:SalesOrderID | //cbc:VersionID | //cac:AdditionalDocumentReference/cbc:ID | //cbc:URI | //cac:PartyTaxScheme/cbc:CompanyID | //cac:Shipment/cbc:ID | //cbc:LicensePlateID | //cbc:RailCarID | //cbc:TrainID | //cbc:VesselID | //cbc:TraceID | //cac:DespatchLine/cbc:ID | //cbc:LineID" flag="error">
+<sch:assert test="not(@schemeID)">This element SHOULD not contain a schemeID attribute.</sch:assert>
+<sch:assert test="not(@schemeName)">This element SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">This element SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">This element SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">This element SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">This element SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">This element SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00236" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:Note | //cbc:DocumentType | //cbc:DocumentHash | //cbc:FileName | //cbc:Description | //cbc:StreetName | //cbc:AdditionalStreetName | //cbc:BuildingNumber | //cbc:CityName | //cbc:PostalZone | //cbc:Line | //cbc:Telephone | //cbc:Telefax | //cbc:ElectronicMail | //cbc:Value | //cbc:FirstName | //cbc:FamilyName | //cbc:Title | //cbc:JobTitle | //cbc:OrganizationDepartment | //cbc:DeliveryInstructions | //cbc:VesselName | //cbc:Name | //cbc:BackorderReason" flag="error">
+<sch:assert test="not(@languageID)">This element SHOULD not contain a languageID attribute.</sch:assert>
+<sch:assert test="not(@languageLocaleID)">This element SHOULD not contain a languageLocaleID attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00237" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:MimeCode | //cbc:IdentificationCode | //cbc:CoordinateSystemCode | //cbc:TransportModeCode | //cbc:DirectionCode" flag="error">
+<sch:assert test="not(@listID)">This element SHOULD not contain a listID attribute.</sch:assert>
+<sch:assert test="not(@listAgencyID)">This element SHOULD not contain a listAgencyID attribute.</sch:assert>
+<sch:assert test="not(@listAgencyName)">This element SHOULD not contain a listAgencyName attribute.</sch:assert>
+<sch:assert test="not(@listName)">This element SHOULD not contain a listName attribute.</sch:assert>
+<sch:assert test="not(@listVersionID)">This element SHOULD not contain a listVersionID attribute.</sch:assert>
+<sch:assert test="not(@name)">This element SHOULD not contain a name attribute.</sch:assert>
+<sch:assert test="not(@languageID)">This element SHOULD not contain a languageID attribute.</sch:assert>
+<sch:assert test="not(@listURI)">This element SHOULD not contain a listURI attribute.</sch:assert>
+<sch:assert test="not(@listSchemeURI)">This element SHOULD not contain a listSchemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00238" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:LatitudeDegreesMeasure | //cbc:LongitudeDegreesMeasure | //cbc:GrossWeightMeasure | //cbc:NetNetWeightMeasure" flag="error">
+<sch:assert test="not(@unitCodeListVersionID)">This element SHOULD not contain an unitCodeListVersionID attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:OrderReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00239" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:OrderReference" flag="error">
+<sch:assert test="not(cbc:CopyIndicator)">OrderReference SHOULD not contain CopyIndicator.</sch:assert>
+<sch:assert test="not(cbc:UUID)">OrderReference SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:IssueDate)">OrderReference SHOULD not contain IssueDate.</sch:assert>
+<sch:assert test="not(cbc:IssueTime)">OrderReference SHOULD not contain IssueTime.</sch:assert>
+<sch:assert test="not(cbc:CustomerReference)">OrderReference SHOULD not contain CustomerReference.</sch:assert>
+<sch:assert test="not(cbc:OrderTypeCode)">OrderReference SHOULD not contain OrderTypeCode.</sch:assert>
+<sch:assert test="not(cac:DocumentReference)">OrderReference SHOULD not contain DocumentReference.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:AdditionalDocumentReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00240" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:AdditionalDocumentReference" flag="error">
+<sch:assert test="not(cbc:CopyIndicator)">A DocumentReference SHOULD not contain CopyIndicator.</sch:assert>
+<sch:assert test="not(cbc:UUID)">A DocumentReference SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:IssueTime)">A DocumentReference SHOULD not contain IssueTime.</sch:assert>
+<sch:assert test="not(cbc:DocumentTypeCode)">A DocumentReference SHOULD not contain DocumentTypeCode.</sch:assert>
+<sch:assert test="not(cbc:XPath)">A DocumentReference SHOULD not contain XPath.</sch:assert>
+<sch:assert test="not(cbc:LanguageID)">A DocumentReference SHOULD not contain LanguageID.</sch:assert>
+<sch:assert test="not(cbc:LocaleCode)">A DocumentReference SHOULD not contain LocaleCode.</sch:assert>
+<sch:assert test="not(cbc:DocumentStatusCode)">A DocumentReference SHOULD not contain DocumentStatusCode.</sch:assert>
+<sch:assert test="not(cbc:DocumentDescription)">A DocumentReference SHOULD not contain DocumentDescription.</sch:assert>
+<sch:assert test="not(cac:ValidityPeriod)">A DocumentReference SHOULD not contain ValidityPeriod.</sch:assert>
+<sch:assert test="not(cac:IssuerParty)">A DocumentReference SHOULD not contain IssuerParty.</sch:assert>
+<sch:assert test="not(cac:ResultOfVerification)">A DocumentReference SHOULD not contain ResultOfVerification.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@format)">An EmbeddedDocumentBinaryObject SHOULD not contain a format attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@encodingCode)">An EmbeddedDocumentBinaryObject SHOULD not contain an encodingCode attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@characterSetCode)">An EmbeddedDocumentBinaryObject SHOULD not contain a characterSetCode attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@uri)">An EmbeddedDocumentBinaryObject SHOULD not contain an uri attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:HashAlgorithmMethod)">An Attachment SHOULD not contain HashAlgorithmMethod.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:ExpiryDate)">An Attachment SHOULD not contain ExpiryDate.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:ExpiryTime)">An Attachment SHOULD not contain ExpiryTime.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:FormatCode)">An Attachment SHOULD not contain FormatCode.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:EncodingCode)">An Attachment SHOULD not contain EncodingCode.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:CharacterSetCode)">An Attachment SHOULD not contain CharacterSetCode.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00241" fpi="SCSN restrictions on UBL syntax" context="//cac:AdditionalDocumentReference" flag="error">
+<sch:assert test="cbc:DocumentType">DocumentType is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:DespatchSupplierParty, cac:DeliveryCustomerParty, cac:BuyerCustomerParty and cac:SellerSupplierParty  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00242" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DespatchSupplierParty/* | //cac:DeliveryCustomerParty/* | //cac:BuyerCustomerParty/* | //cac:SellerSupplierParty/*" flag="error">
+<sch:assert test="name() = 'cac:Party'">This UBL element SHOULD not be used.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00243" fpi="SCSN restrictions on UBL syntax" context="//cac:DespatchSupplierParty | //cac:DeliveryCustomerParty | //cac:BuyerCustomerParty | //cac:SellerSupplierParty" flag="error">
+<sch:assert test="cac:Party">Party is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Party, cac:ManufacturerParty and cac:CarrierParty  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00244" fpi="SCSN restrictions on UBL syntax" context="//cac:Party | //cac:ManufacturerParty | //cac:CarrierParty" flag="error">
+<sch:assert test="cac:PartyIdentification">PartyIdentification is mandatory.</sch:assert>
+<sch:assert test="not(cac:PartyIdentification[2])">PartyIdentification is only allowed once.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme[2])">A PartyTaxScheme is only allowed once.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity[2])">A PartyLegalEntity is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00245" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Party | //cac:ManufacturerParty | //cac:CarrierParty" flag="error">
+<sch:assert test="not(cbc:MarkCareIndicator)">A party SHOULD not contain a MarkCareIndicator.</sch:assert>
+<sch:assert test="not(cbc:MarkAttentionIndicator)">A party SHOULD not contain a MarkAttentionIndicator.</sch:assert>
+<sch:assert test="not(cbc:WebsiteURI)">A party SHOULD not contain a WebsiteURI.</sch:assert>
+<sch:assert test="not(cbc:LogoReferenceID)">A party SHOULD not contain a LogoReferenceID.</sch:assert>
+<sch:assert test="not(cbc:EndpointID)">A party SHOULD not contain a EndPointID.</sch:assert>
+<sch:assert test="not(cbc:IndustryClassificationCode)">A party SHOULD not contain a IndustryClassificationCode.</sch:assert>
+<sch:assert test="not(cac:Language)">A party SHOULD not contain a Language.</sch:assert>
+<sch:assert test="not(cac:AgentParty)">A party SHOULD not contain a AgentParty.</sch:assert>
+<sch:assert test="not(cac:ServiceProviderParty)">A party SHOULD not contain a ServiceProviderParty.</sch:assert>
+<sch:assert test="not(cac:PowerOfAttorney)">A party SHOULD not contain a PowerOfAttorney.</sch:assert>
+<sch:assert test="not(cac:FinancialAccount)">A party SHOULD not contain a FinancialAccount.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cbc:RegistrationName)">A PartyTaxScheme SHOULD not contain a RegistrationName.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cbc:TaxLevelCode)">A PartyTaxScheme SHOULD not contain a TaxLevelCode.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cbc:ExemptionReasonCode)">A PartyTaxScheme SHOULD not contain a ExemptionReasonCode.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cbc:ExemptionReason)">A PartyTaxScheme SHOULD not contain a ExemptionReason.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:RegistrationAddress)">A PartyTaxScheme SHOULD not contain a RegistrationAddress.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:TaxScheme/cbc:ID)">A TaxScheme SHOULD not contain a ID.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:TaxScheme/cbc:Name)">A TaxScheme SHOULD not contain a Name.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:TaxScheme/cbc:TaxTypeCode)">A TaxScheme SHOULD not contain a TaxTypeCode.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:TaxScheme/cbc:CurrencyCode)">A TaxScheme SHOULD not contain a CurrencyCode.</sch:assert>
+<sch:assert test="not(cac:PartyTaxScheme/cac:TaxScheme/cac:JurisdictionRegionAddress)">A TaxScheme SHOULD not contain a JurisdictionRegionAddress.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:RegistrationName)">A PartyLegalEntity SHOULD not contain a RegistrationName.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:RegistrationDate)">A PartyLegalEntity SHOULD not contain a RegistrationDate.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:RegistrationExpirationDate)">A PartyLegalEntity SHOULD not contain a RegistrationExpirationDate.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:CompanyLegalFormCode)">A PartyLegalEntity SHOULD not contain a CompanyLegalFormCode.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:CompanyLegalForm)">A PartyLegalEntity SHOULD not contain a CompanyLegalForm.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:SoleProprietorshipIndicator)">A PartyLegalEntity SHOULD not contain a SoleProprietorshipIndicator.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:CompanyLiquidationStatusCode)">A PartyLegalEntity SHOULD not contain a CompanyLiquidationStatusCode.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:CorporateStockAmount)">A PartyLegalEntity SHOULD not contain a CorporateStockAmount.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cbc:FullyPaidSharesIndicator)">A PartyLegalEntity SHOULD not contain a FullyPaidSharesIndicator.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cac:RegistrationAddress)">A PartyLegalEntity SHOULD not contain a RegistrationAddress.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cac:CorporateRegistrationScheme)">A PartyLegalEntity SHOULD not contain a CorporateRegistrationScheme.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cac:HeadOfficeParty)">A PartyLegalEntity SHOULD not contain a HeadOfficeParty.</sch:assert>
+<sch:assert test="not(cac:PartyLegalEntity/cac:ShareholderParty)">A PartyLegalEntity SHOULD not contain a ShareholderParty.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:ID)">A Person SHOULD not contain an ID.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:MiddleName)">A Person SHOULD not contain a MiddleName.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:OtherName)">A Person SHOULD not contain an OtherName.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:NameSuffix)">A Person SHOULD not contain a NameSuffix.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:NationalityID)">A Person SHOULD not contain a NationalityID.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:GenderCode)">A Person SHOULD not contain a GenderCode.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:BirthDate)">A Person SHOULD not contain a BirthDate.</sch:assert>
+<sch:assert test="not(cac:Person/cbc:BirthplaceName)">A Person SHOULD not contain a BirthplaceName.</sch:assert>
+<sch:assert test="not(cac:Person/cac:FinancialAccount)">A Person SHOULD not contain a FinancialAccount.</sch:assert>
+<sch:assert test="not(cac:Person/cac:IdentityDocumentReference)">A Person SHOULD not contain an IdentityDocumentReference.</sch:assert>
+<sch:assert test="not(cac:Person/cac:ResidenceAddress)">A Person SHOULD not contain a ResidenceAddress.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00246" fpi="SCSN restrictions on UBL syntax" context="//cac:PhysicalLocation/cbc:ID | //cac:PartyLegalEntity/cbc:CompanyID" flag="error">
+<sch:assert test="@schemeID">The attribute schemeID is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00247" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:PartyIdentification/cbc:ID | //cac:PhysicalLocation/cbc:ID | //cac:PartyLegalEntity/cbc:CompanyID" flag="error">
+<sch:assert test="not(@schemeName)">An ID SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">An ID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">An ID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">An ID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">An ID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">An ID SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Contact  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00248" fpi="SCSN restrictions on UBL syntax" context="//cac:Contact" flag="error">
+<sch:assert test="not(cac:OtherCommunication[2])">OtherCommunication is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00249" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Contact" flag="error">
+<sch:assert test="not(cbc:ID)">A Contact SHOULD not contain an ID.</sch:assert>
+<sch:assert test="not(cbc:Name)">A Contact SHOULD not contain a Name.</sch:assert>
+<sch:assert test="not(cbc:Note)">A Contact SHOULD not contain a Note.</sch:assert>
+<sch:assert test="not(cac:OtherCommunication/cbc:ChannelCode)">OtherCommunication SHOULD not contain a ChannelCode.</sch:assert>
+<sch:assert test="not(cac:OtherCommunication/cbc:Channel)">OtherCommunication SHOULD not contain a Channel.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Person  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00250" fpi="SCSN restrictions on UBL syntax" context="//cac:Person" flag="error">
+<sch:assert test="cbc:FamilyName">FamilyName is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:PhysicalLocation and cac:DeliveryLocation  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00251" fpi="SCSN restrictions on UBL syntax" context="//cac:PhysicalLocation | //cac:DeliveryLocation" flag="error">
+<sch:assert test="not(cbc:Description[2])">Description is only allowed once.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate[2])">LocationCoordinate is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00252" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:PhysicalLocation | cac:DeliveryLocation" flag="error">
+<sch:assert test="not(cbc:Conditions)">A Location SHOULD not contain Conditions.</sch:assert>
+<sch:assert test="not(cbc:CountrySubentity)">A Location SHOULD not contain a CountrySubentity.</sch:assert>
+<sch:assert test="not(cbc:CountrySubentityCode)">A Location SHOULD not contain a CountrySubentityCode.</sch:assert>
+<sch:assert test="not(cbc:LocationTypeCode)">A Location SHOULD not contain a LocationTypeCode.</sch:assert>
+<sch:assert test="not(cbc:InformationURI)">A Location SHOULD not contain a InformationURI.</sch:assert>
+<sch:assert test="not(cbc:Name)">A Location SHOULD not contain a Name.</sch:assert>
+<sch:assert test="not(cac:ValidityPeriod)">A Location SHOULD not contain a ValidityPeriod.</sch:assert>
+<sch:assert test="not(cac:SubsidiaryLocation)">A Location SHOULD not contain a SubsidiaryLocation.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate/cbc:LatitudeMinutesMeasure)">A LocationCoordinate SHOULD not contain a LatitudeMinutesMeasure.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate/cbc:LatitudeDirectionCode)">A LocationCoordinate SHOULD not contain a LatitudeDirectionCode.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate/cbc:LongitudeMinutesMeasure)">A LocationCoordinate SHOULD not contain a LongitudeMinutesMeasure.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate/cbc:LongitudeDirectionCode)">A LocationCoordinate SHOULD not contain a LongitudeDirectionCode.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate/cbc:AltitudeMeasure)">A LocationCoordinate SHOULD not contain a AltitudeMeasure.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00253" fpi="SCSN restrictions on UBL syntax" context="//cbc:CoordinateSystemCode" flag="error">
+<sch:assert test="(. = 'ETRS89') or (. = 'GRS80') or (. = 'WGS84')">CoordinateSystem MUST be specified as 'ETRS89', 'GRS80' or 'WGS84'.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Address  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00254" fpi="SCSN restrictions on UBL syntax" context="//cac:Address | //cac:PostalAddress" flag="error">
+<sch:assert test="not(cac:AddressLine[2])">AddressLine is only allowed once.</sch:assert>
+<sch:assert test="cbc:BuildingNumber">BuildingNumber is mandatory.</sch:assert>
+<sch:assert test="cbc:PostalZone">PostalZone is mandatory.</sch:assert>
+<sch:assert test="cac:Country/cbc:IdentificationCode">Country identification code is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00255" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Address | //cac:PostalAddress" flag="error">
+<sch:assert test="not(cbc:ID)">An Address SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:AddressTypeCode)">An Address SHOULD not contain AddressTypeCode.</sch:assert>
+<sch:assert test="not(cbc:AddressFormatCode)">An Address SHOULD not contain AddressFormatCode.</sch:assert>
+<sch:assert test="not(cbc:Postbox)">An Address SHOULD not contain Postbox.</sch:assert>
+<sch:assert test="not(cbc:Floor)">An Address SHOULD not contain Floor.</sch:assert>
+<sch:assert test="not(cbc:Room)">An Address SHOULD not contain Room.</sch:assert>
+<sch:assert test="not(cbc:BlockName)">An Address SHOULD not contain BlockName.</sch:assert>
+<sch:assert test="not(cbc:BuildingName)">An Address SHOULD not contain BuildingName.</sch:assert>
+<sch:assert test="not(cbc:InhouseMail)">An Address SHOULD not contain InhouseMail.</sch:assert>
+<sch:assert test="not(cbc:Department)">An Address SHOULD not contain Department.</sch:assert>
+<sch:assert test="not(cbc:MarkAttention)">An Address SHOULD not contain MarkAttention.</sch:assert>
+<sch:assert test="not(cbc:MarkCare)">An Address SHOULD not contain MarkCare.</sch:assert>
+<sch:assert test="not(cbc:PlotIdentification)">An Address SHOULD not contain PlotIdentification.</sch:assert>
+<sch:assert test="not(cbc:CitySubdivisionName)">An Address SHOULD not contain CitySubdivisionName.</sch:assert>
+<sch:assert test="not(cbc:CountrySubentity)">An Address SHOULD not contain CountrySubentity.</sch:assert>
+<sch:assert test="not(cbc:CountrySubentityCode)">An Address SHOULD not contain CountrySubentityCode.</sch:assert>
+<sch:assert test="not(cbc:Region)">An Address SHOULD not contain Region.</sch:assert>
+<sch:assert test="not(cbc:District)">An Address SHOULD not contain District.</sch:assert>
+<sch:assert test="not(cbc:TimezoneOffset)">An Address SHOULD not contain TimezoneOffset.</sch:assert>
+<sch:assert test="not(cac:Country/cbc:Name)">An Country SHOULD not contain Name.</sch:assert>
+<sch:assert test="not(cac:LocationCoordinate)">An Address SHOULD not contain LocationCoordinate.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  ubl:DespatchAdvice/cac:Shipment  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00256" fpi="SCSN restrictions on UBL syntax" context="ubl:DespatchAdvice/cac:Shipment" flag="error">
+<sch:assert test="not(cac:ShipmentStage[2])">ShipmentStage is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00257" fpi="Only the UBL elements specified by SCSN are allowed" context="ubl:DespatchAdvice/cac:Shipment" flag="error">
+<sch:assert test="not(cbc:ShippingPriorityLevelCode)">A Shipment SHOULD not contain ShippingPriorityLevelCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingCode)">A Shipment SHOULD not contain HandlingCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingInstructions)">A Shipment SHOULD not contain HandlingInstructions.</sch:assert>
+<sch:assert test="not(cbc:Information)">A Shipment SHOULD not contain Information.</sch:assert>
+<sch:assert test="not(cbc:NetWeightMeasure)">A Shipment SHOULD not contain NetWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:GrossVolumeMeasure)">A Shipment SHOULD not contain GrossVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:NetVolumeMeasure)">A Shipment SHOULD not contain NetVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:TotalGoodsItemQuantity)">A Shipment SHOULD not contain TotalGoodsItemQuantity.</sch:assert>
+<sch:assert test="not(cbc:TotalTransportHandlingUnitQuantity)">A Shipment SHOULD not contain TotalTransportHandlingUnitQuantity.</sch:assert>
+<sch:assert test="not(cbc:InsuranceValueAmount)">A Shipment SHOULD not contain InsuranceValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredCustomsValueAmount)">A Shipment SHOULD not contain DeclaredCustomsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredForCarriageValueAmount)">A Shipment SHOULD not contain DeclaredForCarriageValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredStatisticsValueAmount)">A Shipment SHOULD not contain DeclaredStatisticsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:FreeOnBoardValueAmount)">A Shipment SHOULD not contain FreeOnBoardValueAmount.</sch:assert>
+<sch:assert test="not(cbc:SpecialInstructions)">A Shipment SHOULD not contain SpecialInstructions.</sch:assert>
+<sch:assert test="not(cbc:SplitConsignmentIndicator)">A Shipment SHOULD not contain SplitConsignmentIndicator.</sch:assert>
+<sch:assert test="not(cbc:ConsignmentQuantity)">A Shipment SHOULD not contain ConsignmentQuantity.</sch:assert>
+<sch:assert test="not(cac:Consignment)">A Shipment SHOULD not contain Consignment.</sch:assert>
+<sch:assert test="not(cac:GoodsItem)">A Shipment SHOULD not contain GoodsItem.</sch:assert>
+<sch:assert test="not(cac:ReturnAddress)">A Shipment SHOULD not contain ReturnAddress.</sch:assert>
+<sch:assert test="not(cac:OriginAddress)">A Shipment SHOULD not contain OriginAddress.</sch:assert>
+<sch:assert test="not(cac:FirstArrivalPortLocation)">A Shipment SHOULD not contain FirstArrivalPortLocation.</sch:assert>
+<sch:assert test="not(cac:LastExitPortLocation)">A Shipment SHOULD not contain LastExitPortLocation.</sch:assert>
+<sch:assert test="not(cac:ExportCountry)">A Shipment SHOULD not contain ExportCountry.</sch:assert>
+<sch:assert test="not(cac:FreightAllowanceCharge)">A Shipment SHOULD not contain FreightAllowanceCharge.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:ShipmentStage  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00258" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:ShipmentStage" flag="error">
+<sch:assert test="not(cbc:ID)">A ShipmentStage SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:TransportMeansTypeCode)">A ShipmentStage SHOULD not contain TransportMeansTypeCode.</sch:assert>
+<sch:assert test="not(cbc:TransitDirectionCode)">A ShipmentStage SHOULD not contain TransitDirectionCode.</sch:assert>
+<sch:assert test="not(cbc:PreCarriageIndicator)">A ShipmentStage SHOULD not contain PreCarriageIndicator.</sch:assert>
+<sch:assert test="not(cbc:OnCarriageIndicator)">A ShipmentStage SHOULD not contain OnCarriageIndicator.</sch:assert>
+<sch:assert test="not(cbc:EstimatedDeliveryDate)">A ShipmentStage SHOULD not contain EstimatedDeliveryDate.</sch:assert>
+<sch:assert test="not(cbc:EstimatedDeliveryTime)">A ShipmentStage SHOULD not contain EstimatedDeliveryTime.</sch:assert>
+<sch:assert test="not(cbc:RequiredDeliveryDate)">A ShipmentStage SHOULD not contain RequiredDeliveryDate.</sch:assert>
+<sch:assert test="not(cbc:RequiredDeliveryTime)">A ShipmentStage SHOULD not contain RequiredDeliveryTime.</sch:assert>
+<sch:assert test="not(cbc:LoadingSequenceID)">A ShipmentStage SHOULD not contain LoadingSequenceID.</sch:assert>
+<sch:assert test="not(cbc:SuccessiveSequenceID)">A ShipmentStage SHOULD not contain SuccessiveSequenceID.</sch:assert>
+<sch:assert test="not(cbc:Instructions)">A ShipmentStage SHOULD not contain Instructions.</sch:assert>
+<sch:assert test="not(cbc:DemurrageInstructions)">A ShipmentStage SHOULD not contain DemurrageInstructions.</sch:assert>
+<sch:assert test="not(cbc:CrewQuantity)">A ShipmentStage SHOULD not contain CrewQuantity.</sch:assert>
+<sch:assert test="not(cbc:PassengerQuantity)">A ShipmentStage SHOULD not contain PassengerQuantity.</sch:assert>
+<sch:assert test="not(cac:TransitPeriod)">A ShipmentStage SHOULD not contain TransitPeriod.</sch:assert>
+<sch:assert test="not(cac:CarrierParty)">A ShipmentStage SHOULD not contain CarrierParty.</sch:assert>
+<sch:assert test="not(cac:LoadingPortLocation)">A ShipmentStage SHOULD not contain LoadingPortLocation.</sch:assert>
+<sch:assert test="not(cac:UnloadingPortLocation)">A ShipmentStage SHOULD not contain UnloadingPortLocation.</sch:assert>
+<sch:assert test="not(cac:TransshipPortLocation)">A ShipmentStage SHOULD not contain TransshipPortLocation.</sch:assert>
+<sch:assert test="not(cac:LoadingTransportEvent)">A ShipmentStage SHOULD not contain LoadingTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ExaminationTransportEvent)">A ShipmentStage SHOULD not contain ExaminationTransportEvent.</sch:assert>
+<sch:assert test="not(cac:AvailabilityTransportEvent)">A ShipmentStage SHOULD not contain AvailabilityTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ExportationTransportEvent)">A ShipmentStage SHOULD not contain ExportationTransportEvent.</sch:assert>
+<sch:assert test="not(cac:DischargeTransportEvent)">A ShipmentStage SHOULD not contain DischargeTransportEvent.</sch:assert>
+<sch:assert test="not(cac:WarehousingTransportEvent)">A ShipmentStage SHOULD not contain WarehousingTransportEvent.</sch:assert>
+<sch:assert test="not(cac:TakeoverTransportEvent)">A ShipmentStage SHOULD not contain TakeoverTransportEvent.</sch:assert>
+<sch:assert test="not(cac:OptionalTakeoverTransportEvent)">A ShipmentStage SHOULD not contain OptionalTakeoverTransportEvent.</sch:assert>
+<sch:assert test="not(cac:DropoffTransportEvent)">A ShipmentStage SHOULD not contain DropoffTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ActualPickupTransportEvent)">A ShipmentStage SHOULD not contain ActualPickupTransportEvent.</sch:assert>
+<sch:assert test="not(cac:DeliveryTransportEvent)">A ShipmentStage SHOULD not contain DeliveryTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ReceiptTransportEvent)">A ShipmentStage SHOULD not contain ReceiptTransportEvent.</sch:assert>
+<sch:assert test="not(cac:StorageTransportEvent)">A ShipmentStage SHOULD not contain StorageTransportEvent.</sch:assert>
+<sch:assert test="not(cac:AcceptanceTransportEvent)">A ShipmentStage SHOULD not contain AcceptanceTransportEvent.</sch:assert>
+<sch:assert test="not(cac:TerminalOperatorParty)">A ShipmentStage SHOULD not contain TerminalOperatorParty.</sch:assert>
+<sch:assert test="not(cac:CustomsAgentParty)">A ShipmentStage SHOULD not contain CustomsAgentParty.</sch:assert>
+<sch:assert test="not(cac:EstimatedTransitPeriod)">A ShipmentStage SHOULD not contain EstimatedTransitPeriod.</sch:assert>
+<sch:assert test="not(cac:FreightAllowanceCharge)">A ShipmentStage SHOULD not contain FreightAllowanceCharge.</sch:assert>
+<sch:assert test="not(cac:FreightChargeLocation)">A ShipmentStage SHOULD not contain FreightChargeLocation.</sch:assert>
+<sch:assert test="not(cac:DetentionTransportEvent)">A ShipmentStage SHOULD not contain DetentionTransportEvent.</sch:assert>
+<sch:assert test="not(cac:RequestedDepartureTransportEvent)">A ShipmentStage SHOULD not contain RequestedDepartureTransportEvent.</sch:assert>
+<sch:assert test="not(cac:RequestedArrivalTransportEvent)">A ShipmentStage SHOULD not contain RequestedArrivalTransportEvent.</sch:assert>
+<sch:assert test="not(cac:RequestedWaypointTransportEvent)">A ShipmentStage SHOULD not contain RequestedWaypointTransportEvent.</sch:assert>
+<sch:assert test="not(cac:PlannedDepartureTransportEvent)">A ShipmentStage SHOULD not contain PlannedDepartureTransportEvent.</sch:assert>
+<sch:assert test="not(cac:PlannedArrivalTransportEvent)">A ShipmentStage SHOULD not contain PlannedArrivalTransportEvent.</sch:assert>
+<sch:assert test="not(cac:PlannedWaypointTransportEvent)">A ShipmentStage SHOULD not contain PlannedWaypointTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ActualDepartureTransportEvent)">A ShipmentStage SHOULD not contain ActualDepartureTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ActualWaypointTransportEvent)">A ShipmentStage SHOULD not contain ActualWaypointTransportEvent.</sch:assert>
+<sch:assert test="not(cac:ActualArrivalTransportEvent)">A ShipmentStage SHOULD not contain ActualArrivalTransportEvent.</sch:assert>
+<sch:assert test="not(cac:TransportEvent)">A ShipmentStage SHOULD not contain TransportEvent.</sch:assert>
+<sch:assert test="not(cac:EstimatedDepartureTransportEvent)">A ShipmentStage SHOULD not contain EstimatedDepartureTransportEvent.</sch:assert>
+<sch:assert test="not(cac:EstimatedArrivalTransportEvent)">A ShipmentStage SHOULD not contain EstimatedArrivalTransportEvent.</sch:assert>
+<sch:assert test="not(cac:PassengerPerson)">A ShipmentStage SHOULD not contain PassengerPerson.</sch:assert>
+<sch:assert test="not(cac:DriverPerson)">A ShipmentStage SHOULD not contain DriverPerson.</sch:assert>
+<sch:assert test="not(cac:ReportingPerson)">A ShipmentStage SHOULD not contain ReportingPerson.</sch:assert>
+<sch:assert test="not(cac:CrewMemberPerson)">A ShipmentStage SHOULD not contain CrewMemberPerson.</sch:assert>
+<sch:assert test="not(cac:SecurityOfficerPerson)">A ShipmentStage SHOULD not contain SecurityOfficerPerson.</sch:assert>
+<sch:assert test="not(cac:MasterPerson)">A ShipmentStage SHOULD not contain MasterPerson.</sch:assert>
+<sch:assert test="not(cac:ShipsSurgeonPerson)">A ShipmentStage SHOULD not contain ShipsSurgeonPerson.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:TransportMeans  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00259" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:TransportMeans" flag="error">
+<sch:assert test="not(cbc:JourneyID)">A TransportMeans SHOULD not contain JourneyID.</sch:assert>
+<sch:assert test="not(cbc:RegistrationNationalityID)">A TransportMeans SHOULD not contain RegistrationNationalityID.</sch:assert>
+<sch:assert test="not(cbc:RegistrationNationality)">A TransportMeans SHOULD not contain RegistrationNationality.</sch:assert>
+<sch:assert test="not(cbc:TransportMeansTypeCode)">A TransportMeans SHOULD not contain TransportMeansTypeCode.</sch:assert>
+<sch:assert test="not(cbc:TradeServiceCode)">A TransportMeans SHOULD not contain TradeServiceCode.</sch:assert>
+<sch:assert test="not(cac:Stowage)">A TransportMeans SHOULD not contain Stowage.</sch:assert>
+<sch:assert test="not(cac:AirTransport)">A TransportMeans SHOULD not contain AirTransport.</sch:assert>
+<sch:assert test="not(cac:OwnerParty)">A TransportMeans SHOULD not contain OwnerParty.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">A TransportMeans SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cbc:RadioCallSignID)">A MaritimeTransport SHOULD not contain RadioCallSignID.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cbc:ShipsRequirements)">A MaritimeTransport SHOULD not contain ShipsRequirements.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cbc:GrossTonnageMeasure)">A MaritimeTransport SHOULD not contain GrossTonnageMeasure.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cbc:NetTonnageMeasure)">A MaritimeTransport SHOULD not contain NetTonnageMeasure.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cac:RegistryCertificateDocumentReference)">A MaritimeTransport SHOULD not contain RegistryCertificateDocumentReference.</sch:assert>
+<sch:assert test="not(cac:MaritimeTransport/cac:RegistryPortLocation)">A MaritimeTransport SHOULD not contain RegistryPortLocation.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Delivery  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00260" fpi="SCSN restrictions on UBL syntax" context="//cac:Delivery" flag="error">
+<sch:assert test="not(cac:DeliveryTerms[2])">DeliveryTerms is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00261" fpi="SCSN restrictions on UBL syntax" context="//cac:DeliveryTerms" flag="error">
+<sch:assert test="cbc:ID">ID is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00262" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Delivery" flag="error">
+<sch:assert test="not(cbc:ID)">A Delivery SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:Quantity)">A Delivery SHOULD not contain Quantity.</sch:assert>
+<sch:assert test="not(cbc:MinimumQuantity)">A Delivery SHOULD not contain MinimumQuantity.</sch:assert>
+<sch:assert test="not(cbc:MaximumQuantity)">A Delivery SHOULD not contain MaximumQuantity.</sch:assert>
+<sch:assert test="not(cbc:ActualDeliveryDate)">A Delivery SHOULD not contain ActualDeliveryDate.</sch:assert>
+<sch:assert test="not(cbc:ActualDeliveryTime)">A Delivery SHOULD not contain ActualDeliveryTime.</sch:assert>
+<sch:assert test="not(cbc:LatestDeliveryDate)">A Delivery SHOULD not contain LatestDeliveryDate.</sch:assert>
+<sch:assert test="not(cbc:LatestDeliveryTime)">A Delivery SHOULD not contain LatestDeliveryTime.</sch:assert>
+<sch:assert test="not(cbc:ReleaseID)">A Delivery SHOULD not contain ReleaseID.</sch:assert>
+<sch:assert test="not(cac:DeliveryAddress)">A Delivery SHOULD not contain DeliveryAddress.</sch:assert>
+<sch:assert test="not(cac:DeliveryLocation)">A Delivery SHOULD not contain DeliveryLocation.</sch:assert>
+<sch:assert test="not(cac:AlternativeDeliveryLocation)">A Delivery SHOULD not contain AlternativeDeliveryLocation.</sch:assert>
+<sch:assert test="not(cac:RequestedDeliveryPeriod)">A Delivery SHOULD not contain RequestedDeliveryPeriod.</sch:assert>
+<sch:assert test="not(cac:PromisedDeliveryPeriod)">A Delivery SHOULD not contain PromisedDeliveryPeriod.</sch:assert>
+<sch:assert test="not(cac:DeliveryParty)">A Delivery SHOULD not contain DeliveryParty.</sch:assert>
+<sch:assert test="not(cac:NotifyParty)">A Delivery SHOULD not contain NotifyParty.</sch:assert>
+<sch:assert test="not(cac:MinimumDeliveryUnit)">A Delivery SHOULD not contain MinimumDeliveryUnit.</sch:assert>
+<sch:assert test="not(cac:MaximumDeliveryUnit)">A Delivery SHOULD not contain MaximumDeliveryUnit.</sch:assert>
+<sch:assert test="not(cac:Shipment)">A Delivery SHOULD not contain Shipment.</sch:assert>
+<sch:assert test="not(cac:EstimatedDeliveryPeriod/cbc:DurationMeasure)">This Period SHOULD not contain DurationMeasure.</sch:assert>
+<sch:assert test="not(cac:EstimatedDeliveryPeriod/cbc:DescriptionCode)">This Period SHOULD not contain DescriptionCode.</sch:assert>
+<sch:assert test="not(cac:EstimatedDeliveryPeriod/cbc:Description)">This Period SHOULD not contain Description.</sch:assert>
+<sch:assert test="not(cac:DeliveryTerms/cbc:SpecialTerms)">DeliveryTerms SHOULD not contain SpecialTerms.</sch:assert>
+<sch:assert test="not(cac:DeliveryTerms/cbc:LossRiskResponsibilityCode)">DeliveryTerms SHOULD not contain LossRiskResponsibilityCode.</sch:assert>
+<sch:assert test="not(cac:DeliveryTerms/cbc:LossRisk)">DeliveryTerms SHOULD not contain LossRisk.</sch:assert>
+<sch:assert test="not(cac:DeliveryTerms/cbc:Amount)">DeliveryTerms SHOULD not contain Amount.</sch:assert>
+<sch:assert test="not(cac:DeliveryTerms/cac:AllowanceCharge)">DeliveryTerms SHOULD not contain AllowanceCharge.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00263" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:TrackingID" flag="error">
+<sch:assert test="not(@schemeName)">An ID SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">An ID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">An ID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">An ID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">An ID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">An ID SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00264" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DeliveryTerms/cbc:ID" flag="error">
+<sch:assert test="not(@schemeID)">An ID SHOULD not contain a schemeID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">An ID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">An ID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">An ID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">An ID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">An ID SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00265" fpi="SCSN restrictions on UBL syntax" context="//cac:DeliveryTerms/cbc:ID" flag="error">
+<sch:assert test="@schemeName">The attribute schemeName is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00266" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Despatch/*" flag="error">
+<sch:assert test="name() = 'cbc:ActualDespatchDate'">This element SHOULD not be used.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:TransportHandlingUnit  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00267" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:TransportHandlingUnit" flag="error">
+<sch:assert test="not(cbc:ID)">TransportHandlingUnit SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:TransportHandlingUnitTypeCode)">TransportHandlingUnit SHOULD not contain TransportHandlingUnitTypeCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingCode)">TransportHandlingUnit SHOULD not contain HandlingCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingInstructions)">TransportHandlingUnit SHOULD not contain HandlingInstructions.</sch:assert>
+<sch:assert test="not(cbc:HazardousRiskIndicator)">TransportHandlingUnit SHOULD not contain HazardousRiskIndicator.</sch:assert>
+<sch:assert test="not(cbc:TotalGoodsItemQuantity)">TransportHandlingUnit SHOULD not contain TotalGoodsItemQuantity.</sch:assert>
+<sch:assert test="not(cbc:TotalPackageQuantity)">TransportHandlingUnit SHOULD not contain TotalPackageQuantity.</sch:assert>
+<sch:assert test="not(cbc:DamageRemarks)">TransportHandlingUnit SHOULD not contain DamageRemarks.</sch:assert>
+<sch:assert test="not(cbc:ShippingMarks)">TransportHandlingUnit SHOULD not contain ShippingMarks.</sch:assert>
+<sch:assert test="not(cac:HandlingUnitDespatchLine)">TransportHandlingUnit SHOULD not contain HandlingUnitDespatchLine.</sch:assert>
+<sch:assert test="not(cac:ActualPackage)">TransportHandlingUnit SHOULD not contain ActualPackage.</sch:assert>
+<sch:assert test="not(cac:ReceivedHandlingUnitReceiptLine)">TransportHandlingUnit SHOULD not contain ReceivedHandlingUnitReceiptLine.</sch:assert>
+<sch:assert test="not(cac:TransportMeans)">TransportHandlingUnit SHOULD not contain TransportMeans.</sch:assert>
+<sch:assert test="not(cac:HazardousGoodsTransit)">TransportHandlingUnit SHOULD not contain HazardousGoodsTransit.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">TransportHandlingUnit SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:MinimumTemperature)">TransportHandlingUnit SHOULD not contain MinimumTemperature.</sch:assert>
+<sch:assert test="not(cac:MaximumTemperature)">TransportHandlingUnit SHOULD not contain MaximumTemperature.</sch:assert>
+<sch:assert test="not(cac:FloorSpaceMeasurementDimension)">TransportHandlingUnit SHOULD not contain FloorSpaceMeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:PalletSpaceMeasurementDimension)">TransportHandlingUnit SHOULD not contain PalletSpaceMeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:ShipmentDocumentReference)">TransportHandlingUnit SHOULD not contain ShipmentDocumentReference.</sch:assert>
+<sch:assert test="not(cac:Status)">TransportHandlingUnit SHOULD not contain Status.</sch:assert>
+<sch:assert test="not(cac:CustomsDeclaration)">TransportHandlingUnit SHOULD not contain CustomsDeclaration.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:TransportEquipment  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00268" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:TransportEquipment" flag="error">
+<sch:assert test="not(cbc:ID)">TransportEquipment SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:ReferencedConsignmentID)">TransportEquipment SHOULD not contain ReferencedConsignmentID.</sch:assert>
+<sch:assert test="not(cbc:ProviderTypeCode)">TransportEquipment SHOULD not contain ProviderTypeCode.</sch:assert>
+<sch:assert test="not(cbc:OwnerTypeCode)">TransportEquipment SHOULD not contain OwnerTypeCode.</sch:assert>
+<sch:assert test="not(cbc:SizeTypeCode)">TransportEquipment SHOULD not contain SizeTypeCode.</sch:assert>
+<sch:assert test="not(cbc:DispositionCode)">TransportEquipment SHOULD not contain DispositionCode.</sch:assert>
+<sch:assert test="not(cbc:FullnessIndicationCode)">TransportEquipment SHOULD not contain FullnessIndicationCode.</sch:assert>
+<sch:assert test="not(cbc:RefrigerationOnIndicator)">TransportEquipment SHOULD not contain RefrigerationOnIndicator.</sch:assert>
+<sch:assert test="not(cbc:Information)">TransportEquipment SHOULD not contain Information.</sch:assert>
+<sch:assert test="not(cbc:ReturnabilityIndicator)">TransportEquipment SHOULD not contain ReturnabilityIndicator.</sch:assert>
+<sch:assert test="not(cbc:LegalStatusIndicator)">TransportEquipment SHOULD not contain LegalStatusIndicator.</sch:assert>
+<sch:assert test="not(cbc:AirFlowPercent)">TransportEquipment SHOULD not contain AirFlowPercent.</sch:assert>
+<sch:assert test="not(cbc:HumidityPercent)">TransportEquipment SHOULD not contain HumidityPercent.</sch:assert>
+<sch:assert test="not(cbc:AnimalFoodApprovedIndicator)">TransportEquipment SHOULD not contain AnimalFoodApprovedIndicator.</sch:assert>
+<sch:assert test="not(cbc:HumanFoodApprovedIndicator)">TransportEquipment SHOULD not contain HumanFoodApprovedIndicator.</sch:assert>
+<sch:assert test="not(cbc:DangerousGoodsApprovedIndicator)">TransportEquipment SHOULD not contain DangerousGoodsApprovedIndicator.</sch:assert>
+<sch:assert test="not(cbc:RefrigeratedIndicator)">TransportEquipment SHOULD not contain RefrigeratedIndicator.</sch:assert>
+<sch:assert test="not(cbc:Characteristics)">TransportEquipment SHOULD not contain Characteristics.</sch:assert>
+<sch:assert test="not(cbc:DamageRemarks)">TransportEquipment SHOULD not contain DamageRemarks.</sch:assert>
+<sch:assert test="not(cbc:Description)">TransportEquipment SHOULD not contain Description.</sch:assert>
+<sch:assert test="not(cbc:SpecialTransportRequirements)">TransportEquipment SHOULD not contain SpecialTransportRequirements.</sch:assert>
+<sch:assert test="not(cbc:GrossWeightMeasure)">TransportEquipment SHOULD not contain GrossWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:GrossVolumeMeasure)">TransportEquipment SHOULD not contain GrossVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:TareWeightMeasure)">TransportEquipment SHOULD not contain TareWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:TrackingDeviceCode)">TransportEquipment SHOULD not contain TrackingDeviceCode.</sch:assert>
+<sch:assert test="not(cbc:PowerIndicator)">TransportEquipment SHOULD not contain PowerIndicator.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">TransportEquipment SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:TransportEquipmentSeal)">TransportEquipment SHOULD not contain TransportEquipmentSeal.</sch:assert>
+<sch:assert test="not(cac:MinimumTemperature)">TransportEquipment SHOULD not contain MinimumTemperature.</sch:assert>
+<sch:assert test="not(cac:MaximumTemperature)">TransportEquipment SHOULD not contain MaximumTemperature.</sch:assert>
+<sch:assert test="not(cac:ProviderParty)">TransportEquipment SHOULD not contain ProviderParty.</sch:assert>
+<sch:assert test="not(cac:LoadingProofParty)">TransportEquipment SHOULD not contain LoadingProofParty.</sch:assert>
+<sch:assert test="not(cac:SupplierParty)">TransportEquipment SHOULD not contain SupplierParty.</sch:assert>
+<sch:assert test="not(cac:OwnerParty)">TransportEquipment SHOULD not contain OwnerParty.</sch:assert>
+<sch:assert test="not(cac:OperatingParty)">TransportEquipment SHOULD not contain OperatingParty.</sch:assert>
+<sch:assert test="not(cac:LoadingLocation)">TransportEquipment SHOULD not contain LoadingLocation.</sch:assert>
+<sch:assert test="not(cac:UnloadingLocation)">TransportEquipment SHOULD not contain UnloadingLocation.</sch:assert>
+<sch:assert test="not(cac:StorageLocation)">TransportEquipment SHOULD not contain StorageLocation.</sch:assert>
+<sch:assert test="not(cac:PositioningTransportEvent)">TransportEquipment SHOULD not contain PositioningTransportEvent.</sch:assert>
+<sch:assert test="not(cac:QuarantineTransportEvent)">TransportEquipment SHOULD not contain QuarantineTransportEvent.</sch:assert>
+<sch:assert test="not(cac:DeliveryTransportEvent)">TransportEquipment SHOULD not contain DeliveryTransportEvent.</sch:assert>
+<sch:assert test="not(cac:PickupTransportEvent)">TransportEquipment SHOULD not contain PickupTransportEvent.</sch:assert>
+<sch:assert test="not(cac:HandlingTransportEvent)">TransportEquipment SHOULD not contain HandlingTransportEvent.</sch:assert>
+<sch:assert test="not(cac:LoadingTransportEvent)">TransportEquipment SHOULD not contain LoadingTransportEvent.</sch:assert>
+<sch:assert test="not(cac:TransportEvent)">TransportEquipment SHOULD not contain TransportEvent.</sch:assert>
+<sch:assert test="not(cac:ApplicableTransportMeans)">TransportEquipment SHOULD not contain ApplicableTransportMeans.</sch:assert>
+<sch:assert test="not(cac:HaulageTradingTerms)">TransportEquipment SHOULD not contain HaulageTradingTerms.</sch:assert>
+<sch:assert test="not(cac:HazardousGoodsTransit)">TransportEquipment SHOULD not contain HazardousGoodsTransit.</sch:assert>
+<sch:assert test="not(cac:PackagedTransportHandlingUnit)">TransportEquipment SHOULD not contain PackagedTransportHandlingUnit.</sch:assert>
+<sch:assert test="not(cac:ServiceAllowanceCharge)">TransportEquipment SHOULD not contain ServiceAllowanceCharge.</sch:assert>
+<sch:assert test="not(cac:FreightAllowanceCharge)">TransportEquipment SHOULD not contain FreightAllowanceCharge.</sch:assert>
+<sch:assert test="not(cac:AttachedTransportEquipment)">TransportEquipment SHOULD not contain AttachedTransportEquipment.</sch:assert>
+<sch:assert test="not(cac:Delivery)">TransportEquipment SHOULD not contain Delivery.</sch:assert>
+<sch:assert test="not(cac:Pickup)">TransportEquipment SHOULD not contain Pickup.</sch:assert>
+<sch:assert test="not(cac:Despatch)">TransportEquipment SHOULD not contain Despatch.</sch:assert>
+<sch:assert test="not(cac:ShipmentDocumentReference)">TransportEquipment SHOULD not contain ShipmentDocumentReference.</sch:assert>
+<sch:assert test="not(cac:ContainedInTransportEquipment)">TransportEquipment SHOULD not contain ContainedInTransportEquipment.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00269" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:TransportEquipmentTypeCode" flag="error">
+<sch:assert test="not(@listAgencyID)">This element SHOULD not contain a listAgencyID attribute.</sch:assert>
+<sch:assert test="not(@listAgencyName)">This element SHOULD not contain a listAgencyName attribute.</sch:assert>
+<sch:assert test="not(@listName)">This element SHOULD not contain a listName attribute.</sch:assert>
+<sch:assert test="not(@listVersionID)">This element SHOULD not contain a listVersionID attribute.</sch:assert>
+<sch:assert test="not(@name)">This element SHOULD not contain a name attribute.</sch:assert>
+<sch:assert test="not(@languageID)">This element SHOULD not contain a languageID attribute.</sch:assert>
+<sch:assert test="not(@listURI)">This element SHOULD not contain a listURI attribute.</sch:assert>
+<sch:assert test="not(@listSchemeURI)">This element SHOULD not contain a listSchemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Package and cac:ContainedPackage -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00270" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Package | //cac:ContainedPackage" flag="error">
+<sch:assert test="not(cbc:ID)">Package SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:Quantity)">Package SHOULD not contain Quantity.</sch:assert>
+<sch:assert test="not(cbc:ReturnableMaterialIndicator)">Package SHOULD not contain ReturnableMaterialIndicator.</sch:assert>
+<sch:assert test="not(cbc:PackageLevelCode)">Package SHOULD not contain PackageLevelCode.</sch:assert>
+<sch:assert test="not(cbc:PackingMaterial)">Package SHOULD not contain PackingMaterial.</sch:assert>
+<sch:assert test="not(cac:ContainingTransportEquipment)">Package SHOULD not contain ContainingTransportEquipment.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">Package SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:DeliveryUnit)">Package SHOULD not contain DeliveryUnit.</sch:assert>
+<sch:assert test="not(cac:Delivery)">Package SHOULD not contain Delivery.</sch:assert>
+<sch:assert test="not(cac:Pickup)">Package SHOULD not contain Pickup.</sch:assert>
+<sch:assert test="not(cac:Despatch)">Package SHOULD not contain Despatch.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00271" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:PackagingTypeCode" flag="error">
+<sch:assert test="not(@listAgencyID)">This element SHOULD not contain a listAgencyID attribute.</sch:assert>
+<sch:assert test="not(@listAgencyName)">This element SHOULD not contain a listAgencyName attribute.</sch:assert>
+<sch:assert test="not(@listName)">This element SHOULD not contain a listName attribute.</sch:assert>
+<sch:assert test="not(@listVersionID)">This element SHOULD not contain a listVersionID attribute.</sch:assert>
+<sch:assert test="not(@name)">This element SHOULD not contain a name attribute.</sch:assert>
+<sch:assert test="not(@languageID)">This element SHOULD not contain a languageID attribute.</sch:assert>
+<sch:assert test="not(@listURI)">This element SHOULD not contain a listURI attribute.</sch:assert>
+<sch:assert test="not(@listSchemeURI)">This element SHOULD not contain a listSchemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:GoodsItem  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00272" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:GoodsItem" flag="error">
+<sch:assert test="not(cbc:ID)">GoodsItem SHOULD not contain ID.</sch:assert>
+<sch:assert test="not(cbc:SequenceNumberID)">GoodsItem SHOULD not contain SequenceNumberID.</sch:assert>
+<sch:assert test="not(cbc:Description)">GoodsItem SHOULD not contain Description.</sch:assert>
+<sch:assert test="not(cbc:HazardousRiskIndicator)">GoodsItem SHOULD not contain HazardousRiskIndicator.</sch:assert>
+<sch:assert test="not(cbc:DeclaredCustomsValueAmount)">GoodsItem SHOULD not contain DeclaredCustomsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredForCarriageValueAmount)">GoodsItem SHOULD not contain DeclaredForCarriageValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredStatisticsValueAmount)">GoodsItem SHOULD not contain DeclaredStatisticsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:FreeOnBoardValueAmount)">GoodsItem SHOULD not contain FreeOnBoardValueAmount.</sch:assert>
+<sch:assert test="not(cbc:InsuranceValueAmount)">GoodsItem SHOULD not contain InsuranceValueAmount.</sch:assert>
+<sch:assert test="not(cbc:ValueAmount)">GoodsItem SHOULD not contain ValueAmount.</sch:assert>
+<sch:assert test="not(cbc:NetWeightMeasure)">GoodsItem SHOULD not contain NetWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:ChargeableWeightMeasure)">GoodsItem SHOULD not contain ChargeableWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:GrossVolumeMeasure)">GoodsItem SHOULD not contain GrossVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:NetVolumeMeasure)">GoodsItem SHOULD not contain NetVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:PreferenceCriterionCode)">GoodsItem SHOULD not contain PreferenceCriterionCode.</sch:assert>
+<sch:assert test="not(cbc:RequiredCustomsID)">GoodsItem SHOULD not contain RequiredCustomsID.</sch:assert>
+<sch:assert test="not(cbc:CustomsStatusCode)">GoodsItem SHOULD not contain CustomsStatusCode.</sch:assert>
+<sch:assert test="not(cbc:CustomsTariffQuantity)">GoodsItem SHOULD not contain CustomsTariffQuantity.</sch:assert>
+<sch:assert test="not(cbc:CustomsImportClassifiedIndicator)">GoodsItem SHOULD not contain CustomsImportClassifiedIndicator.</sch:assert>
+<sch:assert test="not(cbc:ChargeableQuantity)">GoodsItem SHOULD not contain ChargeableQuantity.</sch:assert>
+<sch:assert test="not(cbc:ReturnableQuantity)">GoodsItem SHOULD not contain ReturnableQuantity.</sch:assert>
+<sch:assert test="not(cbc:TraceID)">GoodsItem SHOULD not contain TraceID.</sch:assert>
+<sch:assert test="not(cac:GoodsItemContainer)">GoodsItem SHOULD not contain GoodsItemContainer.</sch:assert>
+<sch:assert test="not(cac:FreightAllowanceCharge)">GoodsItem SHOULD not contain FreightAllowanceCharge.</sch:assert>
+<sch:assert test="not(cac:InvoiceLine)">GoodsItem SHOULD not contain InvoiceLine.</sch:assert>
+<sch:assert test="not(cac:Temperature)">GoodsItem SHOULD not contain Temperature.</sch:assert>
+<sch:assert test="not(cac:ContainedGoodsItem)">GoodsItem SHOULD not contain ContainedGoodsItem.</sch:assert>
+<sch:assert test="not(cac:OriginAddress)">GoodsItem SHOULD not contain OriginAddress.</sch:assert>
+<sch:assert test="not(cac:Delivery)">GoodsItem SHOULD not contain Delivery.</sch:assert>
+<sch:assert test="not(cac:Pickup)">GoodsItem SHOULD not contain Pickup.</sch:assert>
+<sch:assert test="not(cac:Despatch)">GoodsItem SHOULD not contain Despatch.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">GoodsItem SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:ContainingPackage)">GoodsItem SHOULD not contain ContainingPackage.</sch:assert>
+<sch:assert test="not(cac:ShipmentDocumentReference)">GoodsItem SHOULD not contain ShipmentDocumentReference.</sch:assert>
+<sch:assert test="not(cac:MinimumTemperature)">GoodsItem SHOULD not contain MinimumTemperature.</sch:assert>
+<sch:assert test="not(cac:MaximumTemperature)">GoodsItem SHOULD not contain MaximumTemperature.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00273" fpi="SCSN restrictions on UBL syntax" context="//cbc:Quantity" flag="error">
+<sch:assert test="@unitCode">The attribute unitCode is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00274" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:Quantity" flag="error">
+<sch:assert test="not(@unitCodeListID)">This element SHOULD not contain an unitCodeListID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyID)">This element SHOULD not contain an unitCodeListAgencyID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyName)">This element SHOULD not contain an unitCodeListAgencyName attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:Item  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00275" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:Item" flag="error">
+<sch:assert test="not(cbc:PackQuantity)">An Item SHOULD not contain PackQuantity.</sch:assert>
+<sch:assert test="not(cbc:PackSizeNumeric)">An Item SHOULD not contain PackSizeNumeric.</sch:assert>
+<sch:assert test="not(cbc:CatalogueIndicator)">An Item SHOULD not contain CatalogueIndicator.</sch:assert>
+<sch:assert test="not(cbc:HazardousRiskIndicator)">An Item SHOULD not contain HazardousRiskIndicator.</sch:assert>
+<sch:assert test="not(cbc:AdditionalInformation)">An Item SHOULD not contain AdditionalInformation.</sch:assert>
+<sch:assert test="not(cbc:Keyword)">An Item SHOULD not contain Keyword.</sch:assert>
+<sch:assert test="not(cbc:BrandName)">An Item SHOULD not contain BrandName.</sch:assert>
+<sch:assert test="not(cbc:ModelName)">An Item SHOULD not contain ModelName.</sch:assert>
+<sch:assert test="not(cac:ManufacturersItemIdentification)">An Item SHOULD not contain ManufacturersItemIdentification.</sch:assert>
+<sch:assert test="not(cac:CatalogueItemIdentification)">An Item SHOULD not contain CatalogueItemIdentification.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemIdentification)">An Item SHOULD not contain AdditionalItemIdentification.</sch:assert>
+<sch:assert test="not(cac:CatalogueDocumentReference)">An Item SHOULD not contain CatalogueDocumentReference.</sch:assert>
+<sch:assert test="not(cac:OriginCountry)">An Item SHOULD not contain OriginCountry.</sch:assert>
+<sch:assert test="not(cac:CommodityClassification)">An Item SHOULD not contain CommodityClassification.</sch:assert>
+<sch:assert test="not(cac:TransactionConditions)">An Item SHOULD not contain TransactionConditions.</sch:assert>
+<sch:assert test="not(cac:HazardousItem)">An Item SHOULD not contain HazardousItem.</sch:assert>
+<sch:assert test="not(cac:ClassifiedTaxCategory)">An Item SHOULD not contain ClassifiedTaxCategory.</sch:assert>
+<sch:assert test="not(cac:InformationContentProviderParty)">An Item SHOULD not contain InformationContentProviderParty.</sch:assert>
+<sch:assert test="not(cac:OriginAddress)">An Item SHOULD not contain OriginAddress.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:ProductTraceID)">An ItemInstance SHOULD not contain ProductTraceID.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:ManufactureDate)">An ItemInstance SHOULD not contain ManufactureDate.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:ManufactureTime)">An ItemInstance SHOULD not contain ManufactureTime.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:BestBeforeDate)">An ItemInstance SHOULD not contain BestBeforeDate.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:RegistrationID)">An ItemInstance SHOULD not contain RegistrationID.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeID)">A SerialID SHOULD not contain a schemeID attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeName)">A SerialID SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeAgencyID)">A SerialID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeAgencyName)">A SerialID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeVersionID)">A SerialID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeDataURI)">A SerialID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cbc:SerialID/@schemeURI)">A SerialID SHOULD not contain a schemeURI attribute.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cac:AdditionalItemProperty)">An ItemInstance SHOULD not contain AdditionalItemProperty.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cac:LotIdentification/cbc:ExpiryDate)">A LotIdentification SHOULD not contain ExpiryDate.</sch:assert>
+<sch:assert test="not(cac:ItemInstance/cac:LotIdentification/cac:AdditionalItemProperty)">A LotIdentification SHOULD not contain AdditionalItemProperty.</sch:assert>
+<sch:assert test="not(cac:Certificate)">An Item SHOULD not contain Certificate.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:ID)">An AdditionalItemProperty SHOULD not contain an ID.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:NameCode)">An AdditionalItemProperty SHOULD not contain a NameCode.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:TestMethod)">An AdditionalItemProperty SHOULD not contain a TestMethod.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:ValueQuantity)">An AdditionalItemProperty SHOULD not contain a ValueQuantity.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:ValueQualifier)">An AdditionalItemProperty SHOULD not contain a ValueQualifier.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:ImportanceCode)">An AdditionalItemProperty SHOULD not contain an ImportanceCode.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cbc:ListValue)">An AdditionalItemProperty SHOULD not contain a ListValue.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cac:UsabilityPeriod)">An AdditionalItemProperty SHOULD not contain an UsabilityPeriod.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cac:ItemPropertyGroup)">An AdditionalItemProperty SHOULD not contain an ItemPropertyGroup.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cac:RangeDimension)">An AdditionalItemProperty SHOULD not contain a RangeDimension.</sch:assert>
+<sch:assert test="not(cac:AdditionalItemProperty/cac:ItemPropertyRange)">An AdditionalItemProperty SHOULD not contain an ItemPropertyRange.</sch:assert>
+<sch:assert test="not(cac:Dimension/cbc:Description)">A Dimension SHOULD not contain a Description.</sch:assert>
+<sch:assert test="not(cac:Dimension/cbc:MinimumMeasure)">A Dimension SHOULD not contain a MinimumMeasure.</sch:assert>
+<sch:assert test="not(cac:Dimension/cbc:MaximumMeasure)">A Dimension SHOULD not contain a MaximumMeasure.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00276" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:BuyersItemIdentification | //cac:SellersItemIdentification | //cac:StandardItemIdentification" flag="error">
+<sch:assert test="not(cbc:BarcodeSymbologyID)">An ItemIdentification SHOULD not contain BarcodeSymbologyID.</sch:assert>
+<sch:assert test="not(cac:PhysicalAttribute)">An ItemIdentification SHOULD not contain PhysicalAttribute.</sch:assert>
+<sch:assert test="not(cac:MeasurementDimension)">An ItemIdentification SHOULD not contain MeasurementDimension.</sch:assert>
+<sch:assert test="not(cac:IssuerParty)">An ItemIdentification SHOULD not contain IssuerParty.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00277" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:BuyersItemIdentification/cbc:ID | //cac:SellersItemIdentification/cbc:ID | //cac:BuyersItemIdentification/cbc:ExtendedID | //cac:SellersItemIdentification/cbc:ExtendedID | //cac:StandardItemIdentification/cbc:ExtendedID" flag="error">
+<sch:assert test="not(@schemeID)">This ID SHOULD not contain a schemeID attribute.</sch:assert>
+<sch:assert test="not(@schemeName)">This ID SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">This ID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">This ID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">This ID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">This ID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">This ID SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00278" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:StandardItemIdentification/cbc:ID" flag="error">
+<sch:assert test="not(@schemeName)">This ID SHOULD not contain a schemeName attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyID)">This ID SHOULD not contain a schemeAgencyID attribute.</sch:assert>
+<sch:assert test="not(@schemeAgencyName)">This ID SHOULD not contain a schemeAgencyName attribute.</sch:assert>
+<sch:assert test="not(@schemeVersionID)">This ID SHOULD not contain a schemeVersionID attribute.</sch:assert>
+<sch:assert test="not(@schemeDataURI)">This ID SHOULD not contain a schemeDataURI attribute.</sch:assert>
+<sch:assert test="not(@schemeURI)">This ID SHOULD not contain a schemeURI attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00279" fpi="SCSN restrictions on UBL syntax" context="//cac:Item" flag="error">
+<sch:assert test="not(cbc:Description[2])">Description is only allowed once.</sch:assert>
+<sch:assert test="not(cac:ManufacturerParty[2])">ManufacturerParty is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00280" fpi="SCSN restrictions on UBL syntax" context="//cac:AdditionalItemProperty" flag="error">
+<sch:assert test="cbc:Value">Value is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00281" fpi="SCSN restrictions on UBL syntax" context="//cac:Dimension" flag="error">
+<sch:assert test="cbc:Measure">Measure is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:ItemSpecificationDocumentReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00282" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:ItemSpecificationDocumentReference" flag="error">
+<sch:assert test="not(cbc:CopyIndicator)">A DocumentReference SHOULD not contain CopyIndicator.</sch:assert>
+<sch:assert test="not(cbc:UUID)">A DocumentReference SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:IssueTime)">A DocumentReference SHOULD not contain IssueTime.</sch:assert>
+<sch:assert test="not(cbc:DocumentTypeCode)">A DocumentReference SHOULD not contain DocumentTypeCode.</sch:assert>
+<sch:assert test="not(cbc:XPath)">A DocumentReference SHOULD not contain XPath.</sch:assert>
+<sch:assert test="not(cbc:LanguageID)">A DocumentReference SHOULD not contain LanguageID.</sch:assert>
+<sch:assert test="not(cbc:LocaleCode)">A DocumentReference SHOULD not contain LocaleCode.</sch:assert>
+<sch:assert test="not(cbc:DocumentStatusCode)">A DocumentReference SHOULD not contain DocumentStatusCode.</sch:assert>
+<sch:assert test="not(cbc:DocumentDescription)">A DocumentReference SHOULD not contain DocumentDescription.</sch:assert>
+<sch:assert test="not(cac:ValidityPeriod)">A DocumentReference SHOULD not contain ValidityPeriod.</sch:assert>
+<sch:assert test="not(cac:IssuerParty)">A DocumentReference SHOULD not contain IssuerParty.</sch:assert>
+<sch:assert test="not(cac:ResultOfVerification)">A DocumentReference SHOULD not contain ResultOfVerification.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@format)">An EmbeddedDocumentBinaryObject SHOULD not contain a format attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@encodingCode)">An EmbeddedDocumentBinaryObject SHOULD not contain an encodingCode attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@characterSetCode)">An EmbeddedDocumentBinaryObject SHOULD not contain a characterSetCode attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@uri)">An EmbeddedDocumentBinaryObject SHOULD not contain an uri attribute.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:HashAlgorithmMethod)">An Attachment SHOULD not contain HashAlgorithmMethod.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:ExpiryDate)">An Attachment SHOULD not contain ExpiryDate.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:ExpiryTime)">An Attachment SHOULD not contain ExpiryTime.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:FormatCode)">An Attachment SHOULD not contain FormatCode.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:EncodingCode)">An Attachment SHOULD not contain EncodingCode.</sch:assert>
+<sch:assert test="not(cac:Attachment/cac:ExternalReference/cbc:CharacterSetCode)">An Attachment SHOULD not contain CharacterSetCode.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00283" fpi="SCSN restrictions on UBL syntax" context="//cac:ItemSpecificationDocumentReference" flag="error">
+<sch:assert test="cbc:DocumentType">DocumentType is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:DespatchLine  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00284" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DespatchLine" flag="error">
+<sch:assert test="not(cbc:UUID)">A DespatchLine SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:Note)">A DespatchLine SHOULD not contain Note.</sch:assert>
+<sch:assert test="not(cbc:LineStatusCode)">A DespatchLine SHOULD not contain LineStatusCode.</sch:assert>
+<sch:assert test="not(cbc:OutstandingQuantity)">A DespatchLine SHOULD not contain OutstandingQuantity.</sch:assert>
+<sch:assert test="not(cbc:OutstandingReason)">A DespatchLine SHOULD not contain OutstandingReason.</sch:assert>
+<sch:assert test="not(cac:DocumentReference)">A DespatchLine SHOULD not contain DocumentReference.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00285" fpi="SCSN restrictions on UBL syntax" context="//cac:DespatchLine" flag="error">
+<sch:assert test="cbc:DeliveredQuantity">DeliveredQuantity is mandatory.</sch:assert>
+<sch:assert test="not(cac:Shipment[2])">Shipment is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00286" fpi="SCSN restrictions on UBL syntax" context="//cbc:DeliveredQuantity | //cbc:BackorderQuantity | //cbc:OversupplyQuantity" flag="error">
+<sch:assert test="@unitCode">The attribute unitCode is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00287" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:DeliveredQuantity | //cbc:BackorderQuantity | //cbc:OversupplyQuantity" flag="error">
+<sch:assert test="not(@unitCodeListID)">This element SHOULD not contain an unitCodeListID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyID)">This element SHOULD not contain an unitCodeListAgencyID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyName)">This element SHOULD not contain an unitCodeListAgencyName attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:OrderLineReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00288" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DespatchLine" flag="error">
+<sch:assert test="not(cbc:SalesOrderLineID)">OrderLineReference SHOULD not contain SalesOrderLineID.</sch:assert>
+<sch:assert test="not(cbc:UUID)">OrderLineReference SHOULD not contain UUID.</sch:assert>
+<sch:assert test="not(cbc:LineStatusCode)">OrderLineReference SHOULD not contain LineStatusCode.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:DespatchLine/cac:Shipment  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00289" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DespatchLine/cac:Shipment" flag="error">
+<sch:assert test="not(cbc:ShippingPriorityLevelCode)">A Shipment SHOULD not contain ShippingPriorityLevelCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingCode)">A Shipment SHOULD not contain HandlingCode.</sch:assert>
+<sch:assert test="not(cbc:HandlingInstructions)">A Shipment SHOULD not contain HandlingInstructions.</sch:assert>
+<sch:assert test="not(cbc:Information)">A Shipment SHOULD not contain Information.</sch:assert>
+<sch:assert test="not(cbc:GrossWeightMeasure)">A Shipment SHOULD not contain GrossWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:NetWeightMeasure)">A Shipment SHOULD not contain NetWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:NetNetWeightMeasure)">A Shipment SHOULD not contain NetNetWeightMeasure.</sch:assert>
+<sch:assert test="not(cbc:GrossVolumeMeasure)">A Shipment SHOULD not contain GrossVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:NetVolumeMeasure)">A Shipment SHOULD not contain NetVolumeMeasure.</sch:assert>
+<sch:assert test="not(cbc:TotalGoodsItemQuantity)">A Shipment SHOULD not contain TotalGoodsItemQuantity.</sch:assert>
+<sch:assert test="not(cbc:TotalTransportHandlingUnitQuantity)">A Shipment SHOULD not contain TotalTransportHandlingUnitQuantity.</sch:assert>
+<sch:assert test="not(cbc:InsuranceValueAmount)">A Shipment SHOULD not contain InsuranceValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredCustomsValueAmount)">A Shipment SHOULD not contain DeclaredCustomsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredForCarriageValueAmount)">A Shipment SHOULD not contain DeclaredForCarriageValueAmount.</sch:assert>
+<sch:assert test="not(cbc:DeclaredStatisticsValueAmount)">A Shipment SHOULD not contain DeclaredStatisticsValueAmount.</sch:assert>
+<sch:assert test="not(cbc:FreeOnBoardValueAmount)">A Shipment SHOULD not contain FreeOnBoardValueAmount.</sch:assert>
+<sch:assert test="not(cbc:SpecialInstructions)">A Shipment SHOULD not contain SpecialInstructions.</sch:assert>
+<sch:assert test="not(cbc:SplitConsignmentIndicator)">A Shipment SHOULD not contain SplitConsignmentIndicator.</sch:assert>
+<sch:assert test="not(cbc:ConsignmentQuantity)">A Shipment SHOULD not contain ConsignmentQuantity.</sch:assert>
+<sch:assert test="not(cac:Consignment)">A Shipment SHOULD not contain Consignment.</sch:assert>
+<sch:assert test="not(cac:GoodsItem)">A Shipment SHOULD not contain GoodsItem.</sch:assert>
+<sch:assert test="not(cac:ShipmentStage)">A Shipment SHOULD not contain ShipmentStage.</sch:assert>
+<sch:assert test="not(cac:Delivery)">A Shipment SHOULD not contain Delivery.</sch:assert>
+<sch:assert test="not(cac:ReturnAddress)">A Shipment SHOULD not contain ReturnAddress.</sch:assert>
+<sch:assert test="not(cac:OriginAddress)">A Shipment SHOULD not contain OriginAddress.</sch:assert>
+<sch:assert test="not(cac:FirstArrivalPortLocation)">A Shipment SHOULD not contain FirstArrivalPortLocation.</sch:assert>
+<sch:assert test="not(cac:LastExitPortLocation)">A Shipment SHOULD not contain LastExitPortLocation.</sch:assert>
+<sch:assert test="not(cac:ExportCountry)">A Shipment SHOULD not contain ExportCountry.</sch:assert>
+<sch:assert test="not(cac:FreightAllowanceCharge)">A Shipment SHOULD not contain FreightAllowanceCharge.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00290" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:DespatchLine//cac:GoodsItem" flag="error">
+<sch:assert test="not(cac:Item)">GoodsItem SHOULD not contain Item.</sch:assert>
+</sch:rule>
+</sch:pattern>
+</sch:schema>
