@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!-- saved from url=(0115)https://smartconnected.semantic-treehouse.nl/#/ext/eValidator/XmlSyntaxBinding_9a6a3025-8d10-43b5-8869-1460b436f4cb -->
+<html ng-app="AmpersandApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <title>Semantic Treehouse</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Google Tag Manager -->
+        <script type="text/javascript" async="" src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/destination"></script><script type="text/javascript" async="" src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/js"></script><script async="" src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/analytics.js.download"></script><script async="" src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NH2DRZH');
+        </script>
+        <script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/polyfill.min.js.download"></script>
+        <!-- framework resources -->
+                <link href="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/lib.min.css" rel="stylesheet" media="screen" type="text/css">
+        <link href="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/ampersand.min.css" rel="stylesheet" media="screen" type="text/css">
+        <script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/lib.min.js.download"></script>
+        <script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/ampersand.min.js.download"></script>
+        <!-- project resources -->
+        <link href="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/project.min.css" rel="stylesheet" media="screen" type="text/css">
+<script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/project.min.js.download"></script>
+
+        <script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/ace.js.download"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style>
+    <script src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/mode-xml.js.download"></script></head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH2DRZH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        
+        <!-- HEADER -->
+        <!-- ngInclude: 'app/src/shared/header.html' --><div id="header" ng-include="&#39;app/src/shared/header.html&#39;" class="ng-scope"><div id="scsn-header" class="ng-scope">
+    <div class="container">
+        <a href="https://smartconnected.semantic-treehouse.nl/#/">
+            <img id="header-logo" src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/logo-scsn.png" alt="Smart Connected Supplier Network">
+        </a>
+    </div>
+</div></div>
+
+        <!-- NAVIGATION BAR -->
+        <!-- ngInclude: 'app/src/navbar/navigationBar.html' --><div id="navbar" ng-include="&#39;app/src/navbar/navigationBar.html&#39;" class="ng-scope"><nav class="navbar navbar-default ng-scope" role="navigation" ng-controller="NavigationBarController" cg-busy="{promise:loadingNavBar}">
+    <div id="navbar-wrapper" class="container">
+        <ul class="nav navbar-nav" id="navbar-interfaces" my-navbar-resize="">
+            <li><a href="https://smartconnected.semantic-treehouse.nl/#/"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li id="navbar-interfaces-dropdown" class="dropdown hidden">
+                <a href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+                <ul id="navbar-interfaces-dropdown-menu" class="dropdown-menu" role="menu"></ul>
+            </li>
+            <!-- ngRepeat: item in navbar.top | orderBy : 'seqNr' --><li id="PF__NavMenuItem_1550521814_00722348" class="top-menu-item ng-scope ng-isolate-scope" ng-repeat="item in navbar.top | orderBy : &#39;seqNr&#39;" my-nav-item="" data="item"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() --><a ng-if="item.hasChildren()" href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle ng-scope" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="ng-binding"> SCSN Documentation</span>
+</a><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() --><ul ng-if="item.hasChildren()" class="dropdown-menu ng-scope" role="menu">
+    <!-- ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Projects" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Projects"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Standards</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Codelists" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Codelists"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Codelists</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope dropdown-header"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --><span ng-if="!item.ifc &amp;&amp; !item.url &amp;&amp; !item.hasChildren()" class="ng-binding ng-scope">Messages</span><!-- end ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Business_32_rules" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Business_32_rules"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Business rules</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' -->
+</ul><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: item in navbar.top | orderBy : 'seqNr' --><li id="PF__NavMenuItem_1550521924_00413270" class="top-menu-item ng-scope ng-isolate-scope" ng-repeat="item in navbar.top | orderBy : &#39;seqNr&#39;" my-nav-item="" data="item"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() --><a ng-if="item.hasChildren()" href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle ng-scope" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="ng-binding"> Community</span>
+</a><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() --><ul ng-if="item.hasChildren()" class="dropdown-menu ng-scope" role="menu">
+    <!-- ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Change_32_requests" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Change_32_requests"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Change requests</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Community_32_portal" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Community_32_portal"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Community portal</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Groups" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Groups"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all groups</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' -->
+</ul><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: item in navbar.top | orderBy : 'seqNr' --><li id="PF__NavMenuItem_1550521717_00790411" class="top-menu-item ng-scope ng-isolate-scope" ng-repeat="item in navbar.top | orderBy : &#39;seqNr&#39;" my-nav-item="" data="item"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() --><a ng-if="item.hasChildren()" href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle ng-scope" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="ng-binding"> Support</span>
+</a><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() --><ul ng-if="item.hasChildren()" class="dropdown-menu ng-scope" role="menu">
+    <!-- ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url --><a ng-if="item.url" ng-href="#ext/eValidator" target="_blank" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#ext/eValidator"><!-- link to (external) url -->
+    <span class="glyphicon glyphicon-link"></span>
+    <span class="ng-binding"> eValidator</span>
+</a><!-- end ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' -->
+</ul><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: item in navbar.top | orderBy : 'seqNr' --><li id="PF__NavMenuItem_1550521647_00678893" class="top-menu-item ng-scope ng-isolate-scope" ng-repeat="item in navbar.top | orderBy : &#39;seqNr&#39;" my-nav-item="" data="item"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() --><a ng-if="item.hasChildren()" href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle ng-scope" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="ng-binding"> Management</span>
+</a><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() --><ul ng-if="item.hasChildren()" class="dropdown-menu ng-scope" role="menu">
+    <!-- ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Organizations" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Organizations"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Organizations</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/People" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/People"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> People</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Accounts" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Accounts"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Accounts</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' -->
+</ul><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: item in navbar.top | orderBy : 'seqNr' --><li id="PF__NavMenuItem_1550521084_00490187" class="top-menu-item ng-scope ng-isolate-scope" ng-repeat="item in navbar.top | orderBy : &#39;seqNr&#39;" my-nav-item="" data="item"><!-- ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() --><a ng-if="item.hasChildren()" href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle ng-scope" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-align-justify"></span>
+    <span class="ng-binding"> Settings</span>
+</a><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() --><ul ng-if="item.hasChildren()" class="dropdown-menu ng-scope" role="menu">
+    <!-- ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_projects" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_projects"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all projects</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_specifications" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_specifications"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all specifications</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_interfaces" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_interfaces"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all interfaces</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_uploads" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_uploads"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all uploads</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_communities" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_communities"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all communities</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/List_32_all_32_roles" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/List_32_all_32_roles"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> List all roles</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' --><li ng-repeat="subitem in item.children | orderBy : &#39;seqNr&#39;" ng-class="{&#39;dropdown-submenu&#39; : subitem.hasChildren(), &#39;dropdown-header&#39; : !subitem.ifc &amp;&amp; !subitem.url &amp;&amp; !subitem.hasChildren()}" my-nav-item="" data="subitem" class="ng-scope ng-isolate-scope"><!-- ngIf: item.ifc --><a ng-if="item.ifc" ng-href="#/Edit_32_navigation_32_menu" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/Edit_32_navigation_32_menu"><!-- link to specific interface -->
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <span class="ng-binding"> Edit navigation menu</span>
+</a><!-- end ngIf: item.ifc -->
+<!-- ngIf: item.url -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: subitem in item.children | orderBy : 'seqNr' -->
+</ul><!-- end ngIf: item.hasChildren() -->
+<!-- ngIf: !item.ifc && !item.url && !item.hasChildren() --></li><!-- end ngRepeat: item in navbar.top | orderBy : 'seqNr' -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right" id="navbar-options">
+            <!-- hidden on extra small devices, e.g. phone (<768px) -->
+            <!-- ngIf: navbar.ext.length --><li ng-if="navbar.ext.length" class="dropdown hidden-xs ng-scope" uib-tooltip="Tool menu" tooltip-trigger="mouseenter" tooltip-placement="left">
+                <a href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- ngRepeat: ext in navbar.ext --><!-- ngInclude: ext.url --><li ng-repeat="ext in navbar.ext" ng-include="ext.url" class="ng-scope"><a ng-click="checkAllRules()" class="ng-scope"><span class="glyphicon glyphicon-check"></span><span> (Re)evaluate all rules</span></a></li><!-- end ngRepeat: ext in navbar.ext --><!-- ngInclude: ext.url --><li ng-repeat="ext in navbar.ext" ng-include="ext.url" class="ng-scope"><a ng-controller="ExecEngineController" href="https://smartconnected.semantic-treehouse.nl/" ng-click="run()" class="ng-scope">
+	<span class="glyphicon glyphicon-cog"></span><span> Run execution engine</span>
+</a></li><!-- end ngRepeat: ext in navbar.ext --><!-- ngInclude: ext.url --><li ng-repeat="ext in navbar.ext" ng-include="ext.url" class="ng-scope"><a ng-href="#/ext/importer/" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/#/ext/importer/">
+    <span class="glyphicon glyphicon-upload"></span><span> Population importer</span>
+</a></li><!-- end ngRepeat: ext in navbar.ext -->
+                </ul>
+            </li><!-- end ngIf: navbar.ext.length -->
+            
+            <!-- hidden on extra small devices, e.g. phone (<768px) -->
+            <!-- ngIf: navbar.new.length --><li ng-if="navbar.new.length" class="dropdown hidden-xs ng-scope" uib-tooltip="Create new" tooltip-trigger="mouseenter" tooltip-placement="left">
+                <a href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Account</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Organization</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New SkosConcept</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Taxonomy</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New ExternalSpecification</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Group</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New MessageModel</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Ontology</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New TechnicalStandard</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new --><li ng-repeat="item in navbar.new" ng-class="{&#39;dropdown-submenu&#39; : item.ifcs.length &gt; 1}" class="ng-scope">
+                        <!--<a  style="position:relative; display:inline-block;">-->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        <!-- ngIf: item.ifcs.length > 1 -->
+                        
+                        <!-- ngIf: item.ifcs.length == 1 --><a ng-if="item.ifcs.length == 1" href="https://smartconnected.semantic-treehouse.nl/" ng-click="createNewResource(item.ifcs[0].resourceType, item.ifcs[0].link);" class="ng-binding ng-scope">New Codelist</a><!-- end ngIf: item.ifcs.length == 1 -->
+                        <!-- ngIf: item.ifcs.length == 0 -->
+                    </li><!-- end ngRepeat: item in navbar.new -->
+                </ul>
+            </li><!-- end ngIf: navbar.new.length -->
+            
+            <!-- ngIf: getSessionRoles().length || navbar.role.length --><li ng-if="getSessionRoles().length || navbar.role.length" class="dropdown ng-scope" uib-tooltip="Role menu" tooltip-trigger="mouseenter" tooltip-placement="left">
+                <a href="https://smartconnected.semantic-treehouse.nl/" class="dropdown-toggle" data-toggle="dropdown">
+                    <small class="visible-md-inline visible-lg-inline">
+                        <!-- ngIf: loggedIn() --><span ng-if="loggedIn()" class="ng-binding ng-scope">jelte.bootsma@tno.nl</span><!-- end ngIf: loggedIn() -->
+                    </small>
+                    <span class="glyphicon glyphicon-user"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- ngIf: navbar.role.length --><li ng-if="navbar.role.length" class="dropdown-header ng-scope">Select roles</li><!-- end ngIf: navbar.role.length -->
+                        <!-- (De)activate roles -->
+                        <!-- ngRepeat: role in getSessionRoles() --><li ng-repeat="role in getSessionRoles()" ng-click="$event.stopPropagation();" class="ng-scope"><a href="https://smartconnected.semantic-treehouse.nl/" ng-model="role.active" ng-click="toggleRole(role.id);" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:role.active }"><small></small></span><span ng-transclude=""> Account manager</span></a></li><!-- end ngRepeat: role in getSessionRoles() --><li ng-repeat="role in getSessionRoles()" ng-click="$event.stopPropagation();" class="ng-scope"><a href="https://smartconnected.semantic-treehouse.nl/" ng-model="role.active" ng-click="toggleRole(role.id);" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:role.active }"><small></small></span><span ng-transclude=""> Administrator</span></a></li><!-- end ngRepeat: role in getSessionRoles() --><li ng-repeat="role in getSessionRoles()" ng-click="$event.stopPropagation();" class="ng-scope"><a href="https://smartconnected.semantic-treehouse.nl/" ng-model="role.active" ng-click="toggleRole(role.id);" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:role.active }"><small></small></span><span ng-transclude=""> Beheerder</span></a></li><!-- end ngRepeat: role in getSessionRoles() --><li ng-repeat="role in getSessionRoles()" ng-click="$event.stopPropagation();" class="ng-scope"><a href="https://smartconnected.semantic-treehouse.nl/" ng-model="role.active" ng-click="toggleRole(role.id);" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:role.active }"><small></small></span><span ng-transclude=""> User</span></a></li><!-- end ngRepeat: role in getSessionRoles() -->
+                        <!-- Login/logout button -->
+                        <li>
+                            <a href="https://smartconnected.semantic-treehouse.nl/#/ext/Login" style="white-space:normal;" ng-show="!loggedIn()" class="ng-hide">Login
+                                <span class="glyphicon glyphicon-log-in pull-right"></span>
+                            </a>
+                            <a href="https://smartconnected.semantic-treehouse.nl/" ng-controller="LoginExtLogoutController" ng-click="logout()" style="white-space:normal;" ng-show="loggedIn()" class="ng-scope">Logout
+                                <span class="glyphicon glyphicon-log-out pull-right"></span>
+                            </a>
+                        </li>
+                        <!-- Other menu items -->
+                        <!-- ngRepeat: ext in navbar.role --><!-- ngInclude: ext.url --><li ng-repeat="ext in navbar.role" ng-include="ext.url" class="ng-scope"><a href="https://smartconnected.semantic-treehouse.nl/#/My_32_account" style="white-space:normal;" ng-show="loggedIn()" class="ng-scope">My account
+    <span class="glyphicon glyphicon-cog pull-right"></span>
+</a></li><!-- end ngRepeat: ext in navbar.role -->
+                    <li class="dropdown-header">Notifications</li>
+                        <li><a href="https://smartconnected.semantic-treehouse.nl/" ng-click="localStorage.notify_showSignals=!localStorage.notify_showSignals" ng-model="localStorage.notify_showSignals" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:localStorage.notify_showSignals }"><small></small></span><span ng-transclude=""> Show work items</span></a></li>
+                        <li><a href="https://smartconnected.semantic-treehouse.nl/" ng-click="localStorage.notify_showSuccesses=!localStorage.notify_showSuccesses" ng-model="localStorage.notify_showSuccesses" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:localStorage.notify_showSuccesses }"><small></small></span><span ng-transclude=""> Show successes</span></a></li>
+                        <li><a href="https://smartconnected.semantic-treehouse.nl/" ng-click="localStorage.notify_autoHideSuccesses=!localStorage.notify_autoHideSuccesses" ng-model="localStorage.notify_autoHideSuccesses" class="ng-not-empty ng-valid"><span class="switch checked" ng-class="{ checked:localStorage.notify_autoHideSuccesses }"><small></small></span><span ng-transclude=""> Auto hide successes</span></a></li>
+                </ul>
+            </li><!-- end ngIf: getSessionRoles().length || navbar.role.length -->
+        </ul>
+    </div>
+<div class="cg-busy cg-busy-backdrop cg-busy-backdrop-animation ng-scope ng-hide" ng-show="$cgBusyIsActive()"></div><div class="cg-busy cg-busy-animation ng-scope ng-hide" ng-show="$cgBusyIsActive()"><div class="cg-busy-default-wrapper" style="position: absolute; inset: 0px;">
+
+   <div class="cg-busy-default-sign">
+
+      <div class="cg-busy-default-spinner">
+         <div class="bar1"></div>
+         <div class="bar2"></div>
+         <div class="bar3"></div>
+         <div class="bar4"></div>
+         <div class="bar5"></div>
+         <div class="bar6"></div>
+         <div class="bar7"></div>
+         <div class="bar8"></div>
+         <div class="bar9"></div>
+         <div class="bar10"></div>
+         <div class="bar11"></div>
+         <div class="bar12"></div>
+      </div>
+
+      <div class="cg-busy-default-text ng-binding">Loading...</div>
+
+   </div>
+
+</div></div></nav></div>
+
+        <!-- MAIN -->
+        <div id="main" class="container">
+            <!--  Notification center -->
+            <!-- ngInclude: 'app/src/notifications/notificationCenter.html' --><div ng-include="&#39;app/src/notifications/notificationCenter.html&#39;" class="ng-scope"><div class="container-fluid ng-scope">
+    <div id="notificationCenter" ng-controller="NotificationCenterController" class="ng-scope">
+        
+        <div id="infos" ng-show="localStorage.notify_showInfos">
+            <!-- ngRepeat: info in notifications.infos -->
+        </div>
+        
+        <div id="warnings" ng-show="localStorage.notify_showWarnings">
+            <!-- ngRepeat: warning in notifications.warnings -->
+        </div>
+        
+        <div id="errors" ng-show="localStorage.notify_showErrors">
+            <!-- ngRepeat: (key, error) in notifications.errors -->
+        </div>
+        
+        <div id="invariants" ng-show="localStorage.notify_showInvariants">
+            <!-- ngRepeat: (key, val) in notifications.invariants -->
+        </div>
+                    
+        <div id="signals" ng-show="localStorage.notify_showSignals">
+            <!-- ngRepeat: (key, val) in notifications.signals -->
+        </div>
+        
+        <!-- Success notifications must be last in notifications center because of position:absolute -->
+        <div id="successes" ng-show="localStorage.notify_showSuccesses">
+            <!-- ngRepeat: success in notifications.successes -->
+        </div>
+    </div>
+</div></div>
+            
+            <!-- Placeholder for views (user interfaces) -->
+            <!-- ngView: --><div ng-view="" class="ng-scope"><div class="container-fluid interface ng-scope">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Validator</h4>
+            <form class="ng-valid ng-dirty ng-valid-parse">
+                <div class="form-group">
+                    <label for="projectSelect"> Select project</label>
+                    <select ng-model="validationRequest.selectedProject" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" id="projectSelect" ng-change="validationRequest.projectSelected()" ng-options="project.name for project in validationRequest.getEnabledProjects() | orderBy: &#39;seqNr&#39;"><option label="Message specifications" value="object:177">Message specifications</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="modelSelect"> Select message model</label>
+                    <select ng-model="validationRequest.selectedModel" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" id="modelSelect" ng-change="validationRequest.modelSelected()" ng-options="model.label for model in validationRequest.getEnabledModels() | orderBy: &#39;seqNr&#39;"><option label="Forecast" value="object:178">Forecast</option><option label="What if response" value="object:179">What if response</option><option label="What if request" value="object:180">What if request</option><option label="BillOfMaterials" value="object:181">BillOfMaterials</option><option label="TPD Package" value="object:182">TPD Package</option><option label="Request for Quotation" value="object:183">Request for Quotation</option><option label="Quotation" value="object:184">Quotation</option><option label="Order status" value="object:185">Order status</option><option label="Order message" value="object:186">Order message</option><option label="Order response" value="object:187">Order response</option><option label="Despatch advice" value="object:188">Despatch advice</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="versionSelect"> Select version</label>
+                    <!-- ngIf: validationRequest.selectedModel --><select ng-if="validationRequest.selectedModel" ng-model="validationRequest.selectedVersion" class="form-control ng-valid ng-scope ng-not-empty ng-touched ng-dirty" id="versionSelect" ng-change="validationRequest.versionSelected()">
+                        <!-- ngRepeat: version in validationRequest.getEnabledVersions() | orderBy : 'versionId' --><option ng-repeat="version in validationRequest.getEnabledVersions() | orderBy : &#39;versionId&#39;" ng-value="version" class="ng-binding ng-scope" value="object:536" selected="selected">
+                            0.9.1 RELEASE
+                        </option><!-- end ngRepeat: version in validationRequest.getEnabledVersions() | orderBy : 'versionId' -->
+                    </select><!-- end ngIf: validationRequest.selectedModel -->
+                </div>
+                <div class="form-group">
+                    <label for="syntaxSelect"> Select syntax</label>
+                    <!-- ngIf: validationRequest.selectedVersion --><select ng-if="validationRequest.selectedVersion" ng-model="validationRequest.selectedSyntax" class="form-control ng-pristine ng-valid ng-scope ng-not-empty ng-touched" id="syntaxSelect" ng-change="validationRequest.syntaxSelected()">
+                        <!-- ngRepeat: syntax in validationRequest.selectedVersion.syntaxBindings | orderBy : 'name' | filter : { enabled : true } --><option ng-repeat="syntax in validationRequest.selectedVersion.syntaxBindings | orderBy : &#39;name&#39; | filter : { enabled : true }" ng-value="syntax" ng-selected="$last" class="ng-binding ng-scope" value="object:538" selected="selected">
+                            XML
+                        </option><!-- end ngRepeat: syntax in validationRequest.selectedVersion.syntaxBindings | orderBy : 'name' | filter : { enabled : true } -->
+                    </select><!-- end ngIf: validationRequest.selectedVersion -->
+                </div>
+                <!-- ngIf: validationRequest.selectedSyntax.validateSchema --><div class="form-group ng-scope" ng-if="validationRequest.selectedSyntax.validateSchema">
+                    <label for="xsdSelect"> XML Schema</label>
+                    <div id="xsdSelect">
+                        <!-- ngRepeat: schema in [validationRequest.selectedSyntax.schema] --><div ng-repeat="schema in [validationRequest.selectedSyntax.schema]" class="ng-scope">
+                            <file-object-view file-object="schema" class="ng-isolate-scope"><!-- ngIf: fileObject._ifcs_.length > 0 --><div ng-if="fileObject._ifcs_.length &gt; 0" style="position:relative; display:inline-block; cursor: pointer;" class="ng-scope">
+    <a class="dropdown-toggle ng-binding" data-toggle="dropdown" aria-expanded="false">UBL-Forecast-2.1.xsd</a>
+    <ul class="dropdown-menu" role="menu">
+        <!-- ngRepeat: ifc in fileObject._ifcs_ --><li ng-repeat="ifc in fileObject._ifcs_" class="ng-scope">
+            <a ng-href="#/Edit_32_upload/XSDFile_1485602889_00299457" class="ng-binding" href="https://smartconnected.semantic-treehouse.nl/#/Edit_32_upload/XSDFile_1485602889_00299457">Edit upload</a>
+        </li><!-- end ngRepeat: ifc in fileObject._ifcs_ -->
+        <li>
+            <a href="https://smartconnected.semantic-treehouse.nl/api/v1/uploads/XSDFile_1485602889_00299457/UBL-Forecast-2.1.xsd" target="_blank">Download</a>
+        </li>
+    </ul>
+</div><!-- end ngIf: fileObject._ifcs_.length > 0 -->
+<!-- ngIf: fileObject._ifcs_.length == 0 --></file-object-view>
+                        </div><!-- end ngRepeat: schema in [validationRequest.selectedSyntax.schema] -->
+                        <!-- ngIf: !validationRequest.selectedSyntax.schema -->
+                    </div>
+                </div><!-- end ngIf: validationRequest.selectedSyntax.validateSchema -->
+                <div class="form-group">
+                    <label for="schematronSelect"> Business rules</label>
+                    <!-- ngIf: validationRequest.selectedSyntax --><div id="schematronSelect" ng-if="validationRequest.selectedSyntax" class="ng-scope">
+                        <!-- Schematron specification from Semantic Treehouse managed business rules-->
+                        <div>
+                            <!-- ngIf: validationRequest.selectedSyntax.validateBRs --><a ng-if="validationRequest.selectedSyntax.validateBRs" ng-href="api/v1/evalidator/syntax/XmlSyntaxBinding_9a6a3025-8d10-43b5-8869-1460b436f4cb/schematron/rules" target="_blank" class="ng-scope" href="https://smartconnected.semantic-treehouse.nl/api/v1/evalidator/syntax/XmlSyntaxBinding_9a6a3025-8d10-43b5-8869-1460b436f4cb/schematron/rules">Validation rules</a><!-- end ngIf: validationRequest.selectedSyntax.validateBRs -->
+                        </div>
+                        <!-- Schematron specification from Semantic Treehouse managed codelists -->
+                        <div>
+                            <!-- ngIf: validationRequest.selectedSyntax.validateCodelists -->
+                        </div>
+                        <!-- Additional schematron files -->
+                        <!-- ngRepeat: schematronObject in validationRequest.selectedSyntax.schematron --><div ng-repeat="schematronObject in validationRequest.selectedSyntax.schematron" class="ng-scope">
+                            <input type="checkbox" ng-model="schematronObject.validate" ng-init="schematronObject.validate = schematronObject.selectedByDefault" uib-tooltip="Include these validation rules?" tooltip-trigger="mouseenter" tooltip-placement="right" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                            <!-- ngIf: schematronObject.fileRef --><file-object-view ng-if="schematronObject.fileRef" file-object="schematronObject.fileRef" label="SCSN_Forecast-v0.11.0_UBL-syntax-rules.xml" class="ng-scope ng-isolate-scope"><!-- ngIf: fileObject._ifcs_.length > 0 --><div ng-if="fileObject._ifcs_.length &gt; 0" style="position:relative; display:inline-block; cursor: pointer;" class="ng-scope">
+    <a class="dropdown-toggle ng-binding" data-toggle="dropdown" aria-expanded="false">SCSN_Forecast-v0.11.0_UBL-syntax-rules.xml</a>
+    <ul class="dropdown-menu" role="menu">
+        <!-- ngRepeat: ifc in fileObject._ifcs_ --><li ng-repeat="ifc in fileObject._ifcs_" class="ng-scope">
+            <a ng-href="#/Edit_32_upload/FileObject_76409d0b-9ff5-4bb5-9f94-dfa3fb2c94e8" class="ng-binding" href="https://smartconnected.semantic-treehouse.nl/#/Edit_32_upload/FileObject_76409d0b-9ff5-4bb5-9f94-dfa3fb2c94e8">Edit upload</a>
+        </li><!-- end ngRepeat: ifc in fileObject._ifcs_ -->
+        <li>
+            <a href="https://smartconnected.semantic-treehouse.nl/api/v1/uploads/FileObject_76409d0b-9ff5-4bb5-9f94-dfa3fb2c94e8/SCSN_Forecast-v0.11_UBL-syntax-rules.xml" target="_blank">Download</a>
+        </li>
+    </ul>
+</div><!-- end ngIf: fileObject._ifcs_.length > 0 -->
+<!-- ngIf: fileObject._ifcs_.length == 0 --></file-object-view><!-- end ngIf: schematronObject.fileRef -->
+                            <!-- ngIf: !schematronObject.fileRef -->
+                        </div><!-- end ngRepeat: schematronObject in validationRequest.selectedSyntax.schematron --><div ng-repeat="schematronObject in validationRequest.selectedSyntax.schematron" class="ng-scope">
+                            <input type="checkbox" ng-model="schematronObject.validate" ng-init="schematronObject.validate = schematronObject.selectedByDefault" uib-tooltip="Include these validation rules?" tooltip-trigger="mouseenter" tooltip-placement="right" class="ng-pristine ng-untouched ng-valid ng-empty">
+                            <!-- ngIf: schematronObject.fileRef --><file-object-view ng-if="schematronObject.fileRef" file-object="schematronObject.fileRef" label="SCSN_Forecast-v0.10.0_UBL-syntax-rules.xml" class="ng-scope ng-isolate-scope"><!-- ngIf: fileObject._ifcs_.length > 0 --><div ng-if="fileObject._ifcs_.length &gt; 0" style="position:relative; display:inline-block; cursor: pointer;" class="ng-scope">
+    <a class="dropdown-toggle ng-binding" data-toggle="dropdown">SCSN_Forecast-v0.10.0_UBL-syntax-rules.xml</a>
+    <ul class="dropdown-menu" role="menu">
+        <!-- ngRepeat: ifc in fileObject._ifcs_ --><li ng-repeat="ifc in fileObject._ifcs_" class="ng-scope">
+            <a ng-href="#/Edit_32_upload/FileObject_85f498ec-0056-40e5-9f37-1d74463c5c1a" class="ng-binding" href="https://smartconnected.semantic-treehouse.nl/#/Edit_32_upload/FileObject_85f498ec-0056-40e5-9f37-1d74463c5c1a">Edit upload</a>
+        </li><!-- end ngRepeat: ifc in fileObject._ifcs_ -->
+        <li>
+            <a href="https://smartconnected.semantic-treehouse.nl/api/v1/uploads/FileObject_85f498ec-0056-40e5-9f37-1d74463c5c1a/SCSN_Forecast-v0.10.0_UBL-syntax-rules.xml" target="_blank">Download</a>
+        </li>
+    </ul>
+</div><!-- end ngIf: fileObject._ifcs_.length > 0 -->
+<!-- ngIf: fileObject._ifcs_.length == 0 --></file-object-view><!-- end ngIf: schematronObject.fileRef -->
+                            <!-- ngIf: !schematronObject.fileRef -->
+                        </div><!-- end ngRepeat: schematronObject in validationRequest.selectedSyntax.schematron -->
+                    </div><!-- end ngIf: validationRequest.selectedSyntax -->
+                    <!-- ngIf: !(validationRequest.selectedSyntax.validateBRs || validationRequest.selectedSyntax.schematron.length) -->
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-9">
+            <h4>XML</h4>
+            <div class="form-group">
+                <label for="exampleSelect">Select example</label>
+                <select ng-model="validationRequest.selectedExample" class="form-control ng-valid ng-touched ng-dirty ng-valid-parse ng-empty" id="exampleSelect" ng-change="validationRequest.loadExample(validationRequest.selectedExample);">
+                    <option value="" selected="selected">- no example - </option>
+                    <!-- ngRepeat: example in validationRequest.selectedSyntax.examples | orderBy : 'name' --><option ng-repeat="example in validationRequest.selectedSyntax.examples | orderBy : &#39;name&#39;" ng-value="example" class="ng-binding ng-scope" value="object:534">20181212_ForecastExample_v0.9.1.xml</option><!-- end ngRepeat: example in validationRequest.selectedSyntax.examples | orderBy : 'name' -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleUpload" class="ng-binding">Or upload example (maximum file size: 16M)</label>
+                <input type="file" evalidator-file-reader="" validation-request="validationRequest" id="exampleUpload" class="ng-isolate-scope">
+            </div>
+            <div class="form-group">
+                <label>
+                    <input ng-model="validationRequest.showXML" type="checkbox" ng-disabled="validationRequest.nrOfLines &gt; 10000" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                    <span> Show XML editor</span>
+                    <span ng-show="validationRequest.nrOfLines &gt; 10000" class="ng-hide"> (disabled when &gt; 10.000 lines)</span>
+                </label>
+            </div>
+            <!-- ngIf: validationRequest.showXML --><div class="form-group ng-scope" data-ng-if="validationRequest.showXML">
+                <label for="exampleUpload">And/or edit example</label>
+                <div id="xmlEditor" data-ui-ace="{mode: &#39;xml&#39;}" data-ng-model="validationRequest.xml" class="ng-pristine ng-untouched ng-valid ace_editor ace-tm ng-not-empty"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14px; width: 6.59781px; left: 51px; top: 0px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 311px; width: 47px;"><div class="ace_gutter-cell " style="height: 14px;">1</div><div class="ace_gutter-cell " style="height: 14px;">2<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">3</div><div class="ace_gutter-cell " style="height: 14px;">4</div><div class="ace_gutter-cell " style="height: 14px;">5</div><div class="ace_gutter-cell " style="height: 14px;">6</div><div class="ace_gutter-cell " style="height: 14px;">7<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">8<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">9<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">10</div><div class="ace_gutter-cell " style="height: 14px;">11</div><div class="ace_gutter-cell " style="height: 14px;">12<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">13</div><div class="ace_gutter-cell " style="height: 14px;">14</div><div class="ace_gutter-cell " style="height: 14px;">15<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">16</div><div class="ace_gutter-cell " style="height: 14px;">17</div><div class="ace_gutter-cell " style="height: 14px;">18<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">19</div><div class="ace_gutter-cell " style="height: 14px;">20</div><div class="ace_gutter-cell " style="height: 14px;">21</div><div class="ace_gutter-cell " style="height: 14px;">22</div><div class="ace_gutter-cell " style="height: 14px;">23<span class="ace_fold-widget ace_start ace_open" style="height: 14px;"></span></div><div class="ace_gutter-cell " style="height: 14px;">24</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14px;"></div></div><div class="ace_scroller" style="left: 47px; right: 17px; bottom: 17px;"><div class="ace_content" style="margin-top: 0px; width: 3023px; height: 311px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 531.825px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14px"><span class="ace_punctuation ace_xml-decl ace_xml">&lt;?</span><span class="ace_keyword ace_xml-decl ace_xml">xml</span><span class="ace_text ace_whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_decl-attribute-name ace_xml">version</span><span class="ace_keyword ace_operator ace_decl-attribute-equals ace_xml">=</span><span class="ace_string ace_xml">"1.0"</span><span class="ace_text ace_whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_decl-attribute-name ace_xml">encoding</span><span class="ace_keyword ace_operator ace_decl-attribute-equals ace_xml">=</span><span class="ace_string ace_xml">"UTF-8"</span><span class="ace_punctuation ace_xml-decl ace_xml">?&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">BillOfMaterials</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"SmartConnectedSupplierNetwork:schema:xsd:BillOfMaterials"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns:scsn</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"SmartConnectedSupplierNetwork:schema:xsd:BillOfMaterials"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns:cac</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns:cbc</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns:ext</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">xmlns:xsi</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">123</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:VersionID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">1.0</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:VersionID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:IssueDate</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">2018-10-01</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:IssueDate</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:DocumentStatusCode</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">RELEASED</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:DocumentStatusCode</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:BuyerCustomerParty</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:Party</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:PartyIdentification</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">schemeID</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"GLN"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">[Party identifier]</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:PartyIdentification</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:PartyName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:Name</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">[Company name]</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:Name</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:PartyName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:PhysicalLocation</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_text ace_tag-whitespace ace_xml"> </span><span class="ace_entity ace_other ace_attribute-name ace_xml">schemeID</span><span class="ace_keyword ace_operator ace_attribute-equals ace_xml">=</span><span class="ace_string ace_attribute-value ace_xml">"GLN"</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">5790001398644</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:ID</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:Description</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">[Free-form description of the location]</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:Description</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cac:Address</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:StreetName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Antoon Coolenlaan</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:StreetName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:BuildingNumber</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">1 B</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:BuildingNumber</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:CityName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">Eindhoven</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:CityName</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div><div class="ace_line" style="height:14px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_text ace_xml">    </span><span class="ace_meta ace_tag ace_punctuation ace_tag-open ace_xml">&lt;</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:PostalZone</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span><span class="ace_text ace_xml">5644RX</span><span class="ace_meta ace_tag ace_punctuation ace_end-tag-open ace_xml">&lt;/</span><span class="ace_meta ace_tag ace_tag-name ace_xml">cbc:PostalZone</span><span class="ace_meta ace_tag ace_punctuation ace_tag-close ace_xml">&gt;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59781px; height: 14px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 22px; bottom: 17px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 3556px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 22px; left: 47px; right: 17px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 3023px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+            </div><!-- end ngIf: validationRequest.showXML -->
+            <div class="form-group">
+                <button type="button" data-ng-click="validationRequest.validate(validationRequest.selectedVersion)" class="btn btn-primary" ng-class="{&#39;btn-warning&#39; : validating, &#39;btn-error&#39; : invalid, &#39;btn-success&#39; : valid}" ng-disabled="validationRequest.selectedVersion == null || validating || validationRequest.isEmptyRequest()">
+                    <!-- ngIf: !validating --><span ng-if="!validating" class="ng-scope">Validate message </span><!-- end ngIf: !validating -->
+                    <!-- ngIf: validating -->
+                    <!-- ngIf: validating -->
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Validation result -->
+    <!-- ngIf: validation -->
+    <!-- end validation row -->
+</div></div>
+
+            <div id="main-push"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="tno-footer" class="container">
+            <div id="tno-footer-box">
+                <div>
+                    <a href="https://www.semantic-treehouse.nl/" target="_blank"><img src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/logo-semantic-treehouse.png" style="height:40px; opacity:0.6;"></a>
+                    <a href="https://www.semantic-treehouse.nl/" target="_blank"><span class="text-muted">Semantic Treehouse</span></a>
+                    <span class="text-muted"> | Version: 2.12.0 | </span>
+                    <a href="https://smartconnected.semantic-treehouse.nl/app/resources/Privacy%20statement%20Semantic%20Treehouse%2013%20sept%202019.pdf" target="_blank"><span class="text-muted">Privacy</span></a>
+                    <span> | </span>
+                    <a href="https://discord.gg/kdrbm9RUu8" target="_blank"><span class="text-muted">Join us on Discord</span></a>
+                </div>
+                <div>
+                    <a href="https://www.tno.nl/" target="_blank"><img src="./SCSN_Forecate-v0.9.1_UBL-syntax-rules_files/logo-tno.png" style="height:20px; opacity:0.6;"></a>
+                </div>
+            </div>
+        </div>
+    
+</body></html>

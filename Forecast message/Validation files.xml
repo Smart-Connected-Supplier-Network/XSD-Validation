@@ -1,0 +1,18 @@
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns="http://purl.oclc.org/dsdl/schematron">
+<sch:ns prefix="scsn" uri="urn:scsn/forecast#"/>
+<sch:ns prefix="core" uri="urn:scsn/core#"/>
+<sch:ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
+<sch:ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
+<sch:ns prefix="ext" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"/>
+<sch:ns prefix="ublforecast" uri="urn:oasis:names:specification:ubl:schema:xsd:Forecast-2"/>
+<sch:ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
+<!-- === Rules for category: default === -->
+<sch:pattern id="BusinessRule_1476716768_199753">
+<sch:title>Either Forecast period start date or Forecast period end date should be specified in order to define a Forecast period.</sch:title>
+<!-- No schematron implementation specified for business rule 15 -->
+</sch:pattern>
+<sch:pattern id="BusinessRule_1503916332_00747387">
+<sch:title>TPD reference element must refer to a SCSN TPD document. This means that the document type code MUST contain 'TPD'.</sch:title>
+<!-- No schematron implementation specified for business rule 61ee7404deda8 -->
+</sch:pattern>
+</sch:schema>

@@ -1,0 +1,38 @@
+<sch:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<sch:title>Business rules voor het controleren op syntax gebruik</sch:title>
+<sch:ns prefix="cac" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"/>
+<sch:ns prefix="cbc" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"/>
+<sch:ns prefix="ext" uri="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"/>
+<sch:ns prefix="scsn" uri="SmartConnectedSupplierNetwork:schema:xsd:OrderStatus"/>
+<!--  OrderStatus  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00107" fpi="SCSN restrictions on UBL syntax" context="scsn:OrderStatus" flag="error">
+<sch:assert test="not(cbc:OrderReference[2])">OrderReference is only allowed once.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:OrderReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00108" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:OrderReference/*" flag="error">
+<sch:assert test="name() = 'cbc:ID'">This UBL element SHOULD not be used.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cac:OrderLineReference  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00109" fpi="Only the UBL elements specified by SCSN are allowed" context="//cac:OrderLineReference/*" flag="error">
+<sch:assert test="name() = 'cbc:LineID'">This UBL element SHOULD not be used.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<!--  cbc:Quantity  -->
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00110" fpi="SCSN restrictions on UBL syntax" context="//cbc:Quantity" flag="error">
+<sch:assert test="@unitCode">The attribute unitCode is mandatory.</sch:assert>
+</sch:rule>
+</sch:pattern>
+<sch:pattern>
+<sch:rule id="SCSN-UBL-00111" fpi="Only the UBL elements specified by SCSN are allowed" context="//cbc:Quantity" flag="error">
+<sch:assert test="not(@unitCodeListID)">A Quantity SHOULD not contain an unitCodeListID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyID)">A Quantity SHOULD not contain an unitCodeListAgencyID attribute.</sch:assert>
+<sch:assert test="not(@unitCodeListAgencyName)">A Quantity SHOULD not contain an unitCodeListAgencyName attribute.</sch:assert>
+</sch:rule>
+</sch:pattern>
+</sch:schema>
