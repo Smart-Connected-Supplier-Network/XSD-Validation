@@ -15,7 +15,6 @@
 <sch:assert test="not(cbc:ProfileExecutionID)">An Order SHOULD not contain ProfileExecutionID.</sch:assert>
 <sch:assert test="not(cbc:CopyIndicator)">An Order SHOULD not contain CopyIndicator.</sch:assert>
 <sch:assert test="not(cbc:UUID)">An Order SHOULD not contain UUID.</sch:assert>
-<sch:assert test="not(cbc:IssueTime)">An Order SHOULD not contain IssueTime.</sch:assert>
 <sch:assert test="not(cbc:SubmissionDueDate)">An Order SHOULD not contain SubmissionDueDate.</sch:assert>
 <sch:assert test="not(cbc:CatalogueDocumentReference)">An Order SHOULD not contain CatalogueDocumentReference.</sch:assert>
 <sch:assert test="not(cbc:PricingCurrencyCode)">An Order SHOULD not contain PricingCurrencyCode.</sch:assert>
